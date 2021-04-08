@@ -1,0 +1,63 @@
+.uk-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    transition: $transition--hover;
+
+}
+
+.btn {
+    &-solid {
+        @mixin btn-solid($btn-color, $font-color) {
+            background: $btn-color;
+            color: $font-color;
+            font-weight: 600;
+            &:active {}
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {}
+            }
+        }
+        &-primary {
+            @include btn-solid(null, $text-light);
+            background: linear-gradient(180deg, #A8D538 0%, #79A017 100%);
+            box-shadow: 0px 2.57982px 6.44956px rgba(99, 133, 14, 0.44);
+            &:active {
+                box-shadow: 0px 1px 3px rgba(99, 133, 14, 0.44);
+            }
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                box-shadow: 0px 4px 10px rgba(99, 133, 14, 0.44);
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:focus {
+                    box-shadow: 0px 2px 4px rgba(99, 133, 14, 0.44);
+                }
+                &:hover {
+                    color: $text-light !important;
+                    box-shadow: 0px 2px 4px rgba(99, 133, 14, 0.44);
+                }
+            }
+        }
+    }
+    &-outline {
+        @mixin btn-outline($btn-color) {
+            border: 0.0625rem solid $btn-color;
+            background: transparent;
+            color: $btn-color;
+            &:active {
+                background: $btn-color;
+                color: $text-light;
+            }
+            @media (min-width: map-get($grid-breakpoints, lg)) {
+                &:hover {
+                    background: $btn-color;
+                    color: $text-light;
+                }
+            }
+        }
+        &-primary {
+            @include btn-outline($primary);
+        }
+    }
+}

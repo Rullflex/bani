@@ -1,0 +1,121 @@
+//- popup
+mixin popup()
+	.popup.uk-flex-top(data-uk-modal)&attributes(attributes)
+		.popup__body.uk-modal-dialog.uk-modal-body.uk-margin-auto-vertical
+			button.popup__close.uk-modal-close-default(type="button" data-uk-close)
+			block
+
+//- Slider dots and navigation
+
+mixin slider-dots()
+	ul.uk-slider-nav.uk-dotnav.slidedots&attributes(attributes)
+mixin slideshow-dots()
+	ul.uk-slideshow-nav.uk-dotnav.slidedots&attributes(attributes)
+
+mixin slider-nav()
+	.slider-nav&attributes(attributes)
+		a.slidenav.slidenav-prev(href="#" data-uk-slider-item="previous")
+			+icon('arrow-left')
+		ul.uk-slider-nav.uk-dotnav.slidedots
+		a.slidenav.slidenav-next(href="#" data-uk-slider-item="next")
+			+icon('arrow-right')
+
+mixin slideshow-nav()
+	a.slidenav.slidenav-prev(href="#" data-uk-slideshow-item="previous")&attributes(attributes)
+		+icon('arrow-left')
+	a.slidenav.slidenav-next(href="#" data-uk-slideshow-item="next")&attributes(attributes)
+		+icon('arrow-right')
+
+
+
+//- iconset
+
+mixin icon(icon, filler = 'currentColor')
+	case icon
+		when 'hphones'
+			svg(width='43' height='43' viewbox='0 0 43 43' fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")&attributes(attributes)
+				path(d='M6.47458 14.3941C6.82603 7.72995 10.475 3.38574 15.1105 1.37052C17.0857 0.511218 19.2287 0.0825195 21.3589 0.0825195C23.49 0.0825195 25.6334 0.511218 27.6081 1.371C32.2475 3.38622 35.8965 7.73471 36.245 14.3989C37.7629 14.6883 39.1196 15.4351 40.1615 16.4894C41.5096 17.8523 42.3408 19.7235 42.3408 21.7878C42.3408 23.865 41.5015 25.7477 40.1453 27.1063L40.1405 27.1039C38.987 28.2622 37.4615 29.0437 35.7634 29.254C35.1125 31.9211 33.8708 34.1261 32.2542 35.8591C30.732 37.4942 28.8794 38.7007 26.8738 39.4784C26.6101 41.4531 24.3025 43.0001 21.4929 43.0001C18.5082 43.0001 16.0886 41.2543 16.0886 39.1022C16.0886 36.952 18.5082 35.2067 21.4929 35.2067C23.2816 35.2067 24.8657 35.8323 25.849 36.7975C27.4632 36.1704 28.9476 35.2019 30.1636 33.8987C32.0625 31.8634 33.3181 28.9779 33.3996 25.2393V21.7878V15.7045H33.4053V15.6869C33.4812 9.61689 30.4254 5.7257 26.4737 4.009C24.8791 3.31516 23.1256 2.96801 21.3589 2.96801C19.5945 2.96801 17.8401 3.31516 16.245 4.009C12.3161 5.71711 9.27423 9.57111 9.31286 15.5829C9.3162 15.6225 9.31858 15.6625 9.31858 15.7045V21.7873V27.8683C9.31858 28.6661 8.67387 29.3108 7.87989 29.3108C5.80793 29.3108 3.93243 28.4691 2.57528 27.1058C2.54429 27.0772 2.51806 27.0486 2.49136 27.0171C1.18285 25.6614 0.376953 23.814 0.376953 21.7878C0.376953 19.7149 1.21861 17.8327 2.57767 16.4694L2.57576 16.4651C3.61723 15.4198 4.96531 14.6792 6.47458 14.3941ZM6.44168 26.1959V21.7878V17.3773C5.74212 17.6067 5.11743 17.9982 4.60958 18.5065L4.60624 18.5042L4.60385 18.5065C3.77125 19.3415 3.25338 20.5017 3.25338 21.7873C3.25338 23.0382 3.74455 24.1693 4.53852 25L4.6091 25.0662C5.11743 25.5751 5.74212 25.9656 6.44168 26.1959ZM36.2775 21.7878V26.1983C36.978 25.9704 37.6022 25.5793 38.1091 25.0715L38.1115 25.0691L38.1091 25.0667C38.946 24.227 39.4639 23.0672 39.4639 21.7878C39.4639 20.5108 38.9531 19.3549 38.1282 18.5194C37.6155 18.003 36.9832 17.6029 36.2775 17.3707V21.7878Z' fill='#96C12A')
+		when 'arrow-left'
+			svg(width="61" height="14" viewBox="0 0 61 14" fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")&attributes(attributes)
+				path(d="M0.590279 6.28463C0.258972 6.61594 0.258972 7.15309 0.590279 7.4844L5.98922 12.8833C6.32052 13.2146 6.85767 13.2146 7.18898 12.8833C7.52028 12.552 7.52028 12.0149 7.18898 11.6836L2.38992 6.88452L7.18898 2.08546C7.52028 1.75416 7.52028 1.217 7.18898 0.885697C6.85767 0.554391 6.32052 0.554391 5.98922 0.885697L0.590279 6.28463ZM60.3428 6.03616L1.19016 6.03616L1.19016 7.73288L60.3428 7.73288L60.3428 6.03616Z" fill="#696969")
+		when 'arrow-right'
+			svg(width="61" height="14" viewBox="0 0 61 14" fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")&attributes(attributes)
+				path(d="M60.6758 6.28463C61.0071 6.61594 61.0071 7.15309 60.6758 7.4844L55.2769 12.8833C54.9456 13.2146 54.4084 13.2146 54.0771 12.8833C53.7458 12.552 53.7458 12.0149 54.0771 11.6836L58.8762 6.88452L54.0771 2.08546C53.7458 1.75416 53.7458 1.217 54.0771 0.885697C54.4084 0.554391 54.9456 0.554391 55.2769 0.885697L60.6758 6.28463ZM0.92334 6.03616L60.076 6.03616L60.076 7.73288L0.92334 7.73288L0.92334 6.03616Z" fill="#696969")
+		when 'play-btn'
+			svg(width="129" height="130" viewBox="0 0 129 130" fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")&attributes(attributes)
+				circle(cx="64.7239" cy="64.7835" r="64.2601" fill="white")
+				path(d="M64.7246 10.2834C34.3494 10.2834 9.72461 34.6839 9.72461 64.7834C9.72461 94.883 34.3494 119.283 64.7246 119.283C95.0999 119.283 119.725 94.883 119.725 64.7834C119.725 34.6839 95.0999 10.2834 64.7246 10.2834ZM83.734 67.6724L56.234 84.7036C55.6775 85.0479 55.0448 85.2209 54.4121 85.2209C53.8389 85.2209 53.2648 85.0796 52.7454 84.7935C51.6527 84.1931 50.9746 83.0537 50.9746 81.8147V47.7522C50.9746 46.5132 51.6527 45.3738 52.7454 44.7734C53.838 44.1697 55.1742 44.2063 56.234 44.8633L83.734 61.8945C84.7386 62.5183 85.3496 63.6094 85.3496 64.7834C85.3496 65.9575 84.7386 67.0488 83.734 67.6724Z" fill="#96C12A")
+		when 'social-fb'
+			svg(width="52" height="51" viewBox="0 0 52 51" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none")&attributes(attributes)
+				path(d="M37.3071 0.36084H14.6545C6.97415 0.36084 0.728271 6.60673 0.728271 14.317V36.9695C0.728271 44.6499 6.97416 50.9256 14.6844 50.9256H37.337C45.0173 50.9256 51.2931 44.6798 51.2931 36.9695V14.317C51.2632 6.60673 44.9874 0.36084 37.3071 0.36084ZM46.7805 36.9396C46.7805 42.1694 42.5369 46.4131 37.3071 46.4131H14.6545C9.42469 46.4131 5.18107 42.1694 5.18107 36.9396V14.317C5.18107 9.08715 9.42469 4.84354 14.6545 4.84354H37.3071C42.5369 4.84354 46.7805 9.08715 46.7805 14.317V36.9396Z" fill=filler)
+				path(d="M21.1692 19.666H17.2245V24.9257H21.1692V40.7346H27.7738V24.9556H32.5852L33.0633 19.6959H27.8036V17.4844C27.8036 16.2292 28.0427 15.7212 29.268 15.7212H33.0633V9.1167H28.0427C23.2911 9.1167 21.1991 11.2086 21.1991 15.2132L21.1692 19.666Z" fill=filler)
+		when 'inst'
+			svg(width='28' height='28' viewbox='0 0 28 28' fill=filler xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")&attributes(attributes)
+				path(d='M20.1359 0.374756H7.78052C3.59144 0.374756 0.168457 3.78144 0.168457 7.98683V20.3422C0.168457 24.5313 3.57514 27.9542 7.78052 27.9542H20.1359C24.325 27.9542 27.7479 24.5476 27.7479 20.3422V7.98683C27.7479 3.78144 24.3413 0.374756 20.1359 0.374756ZM25.303 20.3259C25.303 23.1784 22.9884 25.4929 20.1359 25.4929H7.78052C4.92804 25.4929 2.61345 23.1784 2.61345 20.3259V7.97052C2.61345 5.11804 4.92804 2.80344 7.78052 2.80344H20.1359C22.9884 2.80344 25.303 5.11804 25.303 7.97052V20.3259Z' fill=filler)
+				path(d='M13.9744 7.04224C10.0625 7.04224 6.86768 10.2207 6.86768 14.149C6.86768 18.061 10.0462 21.2558 13.9744 21.2558C17.9027 21.2558 21.0649 18.061 21.0649 14.149C21.0649 10.237 17.8864 7.04224 13.9744 7.04224ZM13.9744 18.8108C11.4154 18.8108 9.31267 16.7244 9.31267 14.149C9.31267 11.5736 11.3991 9.48723 13.9744 9.48723C16.5498 9.48723 18.6199 11.5899 18.6199 14.149C18.6199 16.7244 16.5335 18.8108 13.9744 18.8108Z' fill=filler)
+				circle(cx='21.8285' cy='6.7662' r='1.38852' fill=filler)
+
+//- type: `jpg`/ `png` or jpg/ png if so-called var inited
+//- src: `${path}/to/img`  - without prefixes and dimensions
+//- dimentions: `s`/ `sml`/ `sl`/ `smlx`/ `sx`....
+//- retina: true/ false
+
+//- Атрибуты типа class, alt записываются как обычно в скобках сразу за миксином  -- +picture(jpg, 'tmp')(class="pic" alt="lev")
+
+//- image nameing: anyname-sm.jpg
+
+- var jpg = `jpg`, png = `png`
+
+- var globalRetinaUsage = `` //- `` -if false
+- var globalDimentionsUsage = `sml`
+
+- var postfixRetina = '@2x'
+- var postfix = { sm: `-sm`, md: `-md`, lg: `-lg`, xl: `-xl` } //- `smlx`
+
+mixin picture(type, src, dimentions = globalDimentionsUsage, retina = globalRetinaUsage)
+	picture
+		if dimentions.includes(`n`)
+			source(srcset=ipl data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.webp 2x,` : ``} ${src}.webp${retina.includes(`n`) ? ` 1x` : ``}` type=`image/webp`)
+			source(srcset=ipl data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.${type} 2x,` : ``} ${src}.${type}${retina.includes(`n`) ? ` 1x` : ``}` type=`image/${type}`)
+			img.lazyload(src!=ipl data-src!=`${src}.${type}` alt='')&attributes(attributes)
+		else
+			if dimentions.includes(`x`)
+				source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.webp 2x,` : ``} ${src + postfix.xl}.webp${retina.includes(`x`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${xl}px)` srcset=ipl data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.${type} 2x,` : ``} ${src + postfix.xl}.${type}${retina.includes(`x`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.webp 2x,` : ``} ${src + postfix.lg}.webp${retina.includes(`l`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${lg}px)` srcset=ipl data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.${type} 2x,` : ``} ${src + postfix.lg}.${type}${retina.includes(`l`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`m`)
+				source(media=`(min-width: ${md}px)` srcset=ipl data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.webp 2x,` : ``} ${src + postfix.md}.webp${retina.includes(`m`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${md}px)` srcset=ipl data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.${type} 2x,` : ``} ${src + postfix.md}.${type}${retina.includes(`m`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`s`)
+				source(media=`(min-width: 0px)` srcset=ipl data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x,` : ``} ${src + postfix.sm}.webp${retina.includes(`s`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: 0px)` srcset=ipl data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x,` : ``} ${src + postfix.sm}.${type}${retina.includes(`s`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				img.lazyload(src!=ipl data-src!=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			else
+				img.lazyload(src!=ipl data-src!=`${src + postfix.md}.${type}` alt='')&attributes(attributes)
+			
+mixin picture-min(type, src, minSrc,  dimentions = globalDimentionsUsage, retina = globalRetinaUsage)
+	picture
+		if dimentions.includes(`n`)
+			source(srcset=`${minSrc}-min.${type}` data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.webp 2x,` : ``} ${src}.webp${retina.includes(`n`) ? ` 1x` : ``}` type=`image/webp`)
+			source(srcset=`${minSrc}-min.${type}` data-srcset!=`${retina.includes(`n`) ? `${src + postfixRetina}.${type} 2x,` : ``} ${src}.${type}${retina.includes(`n`) ? ` 1x` : ``}` type=`image/${type}`)
+			img.lazyload.lazymin(src!=`${minSrc}-min.${type}` data-src!=`${src}.${type}` alt='')&attributes(attributes)
+		else
+			if dimentions.includes(`x`)
+				source(media=`(min-width: ${xl}px)` srcset=`${minSrc + postfix.xl}-min.${type}` data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.webp 2x,` : ``} ${src + postfix.xl}.webp${retina.includes(`x`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${xl}px)` srcset=`${minSrc + postfix.xl}-min.${type}` data-srcset!=`${retina.includes(`x`) ? `${src + postfix.xl + postfixRetina}.${type} 2x,` : ``} ${src + postfix.xl}.${type}${retina.includes(`x`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				source(media=`(min-width: ${lg}px)` srcset=`${minSrc + postfix.lg}-min.${type}` data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.webp 2x,` : ``} ${src + postfix.lg}.webp${retina.includes(`l`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${lg}px)` srcset=`${minSrc + postfix.lg}-min.${type}` data-srcset!=`${retina.includes(`l`) ? `${src + postfix.lg + postfixRetina}.${type} 2x,` : ``} ${src + postfix.lg}.${type}${retina.includes(`l`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`m`)
+				source(media=`(min-width: ${md}px)` srcset=`${minSrc + postfix.md}-min.${type}` data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.webp 2x,` : ``} ${src + postfix.md}.webp${retina.includes(`m`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: ${md}px)` srcset=`${minSrc + postfix.md}-min.${type}` data-srcset!=`${retina.includes(`m`) ? `${src + postfix.md + postfixRetina}.${type} 2x,` : ``} ${src + postfix.md}.${type}${retina.includes(`m`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`s`)
+				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.webp 2x,` : ``} ${src + postfix.sm}.webp${retina.includes(`s`) ? ` 1x` : ``}` type=`image/webp`)
+				source(media=`(min-width: 0px)` srcset=`${minSrc + postfix.sm}-min.${type}` data-srcset!=`${retina.includes(`s`) ? `${src + postfix.sm + postfixRetina}.${type} 2x,` : ``} ${src + postfix.sm}.${type}${retina.includes(`s`) ? ` 1x` : ``}` type=`image/${type}`)
+			if dimentions.includes(`l`)
+				img.lazyload.lazymin(src!=`${minSrc + postfix.lg}-min.${type}` data-src!=`${src + postfix.lg}.${type}` alt='')&attributes(attributes)
+			else
+				img.lazyload.lazymin(src!=`${minSrc + postfix.md}-min.${type}` data-src!=`${src + postfix.md}.${type}` alt='')&attributes(attributes)

@@ -1,0 +1,18 @@
+@import "./elements/buttons";
+@import "./elements/input";
+@import "./elements/slider";
+
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+.text-green {
+    color: #84AE19;
+}
+h2 {
+    font-size: 1.25rem;
+    line-height: 1.3em;
+    text-align: center;
+}

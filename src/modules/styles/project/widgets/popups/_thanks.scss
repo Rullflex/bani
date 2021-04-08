@@ -1,0 +1,22 @@
+#thanks {
+    .popup {
+        &__body {
+            padding: 2rem 0;
+        }
+        &__close {
+            color: $primary;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    #thanks {
+        .popup {
+            &__body {
+                padding: 50px 0;
+                width: 430px;
+            }
+            &__close {
+            }
+        }
+    }
+}

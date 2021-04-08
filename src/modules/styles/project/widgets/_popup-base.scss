@@ -1,0 +1,77 @@
+.popup {
+    padding: 1rem 0;
+	background: rgba(0,0,0,.6);
+    &__body {
+        border-radius: 1.375rem;
+        width: 18.75rem;
+        margin-top: auto; 
+        margin-bottom: auto; 
+        padding: 0;
+        box-shadow: 0px 4px 36px rgba(0, 0, 0, 0.25);
+        overflow: hidden;
+    }
+    &__close {
+        color: white;
+        right: 0.5rem;
+        svg {
+            width: 1.2rem;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-weight: bold;
+        font-size: 1.0625rem;
+        line-height: 1.3125rem;
+        margin-bottom: 0.5rem;
+    }
+    &__subtitle {
+        text-align: center;
+        font-weight: 500;
+        font-size: 1rem;
+        line-height: 1.375rem;
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .popup {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+        &__body {
+            width: 700px;
+            border-radius: 22px;
+        }
+        &__close {
+            right: 0.8rem;
+            svg {
+            }
+        }
+        &__title {
+            font-size: 23.1133px;
+            line-height: 28px;
+            margin-bottom: 16px;
+        }
+        &__subtitle {
+            font-size: 18px;
+            line-height: 22px;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    .popup {
+        &__body {
+            width: 1246px;
+            border-radius: 25px;
+        }
+        &__close {
+            right: 1rem;
+            top: 1rem;
+            svg {
+                width: 1.5rem;
+            }
+            &:hover {
+                color: #eeeeee;
+            }
+        }
+        &__title {}
+        &__subtitle {}
+    }
+}

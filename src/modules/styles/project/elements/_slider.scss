@@ -1,0 +1,42 @@
+.slide {
+    &dots {
+        justify-content: center;
+        margin-left: 0;
+        &>* {
+            padding: 0 0.125rem;
+            &>* {
+                width: 0.625rem;
+                height: 0.625rem;
+                background: #DEDEDE;
+                transition: $transition--fast;
+                &:hover, &:focus {
+                    background-color: link-hover($primary);
+                }
+            }
+        }
+        &>.uk-active>* {
+            background-color: $primary;
+            width: 2.5rem;
+            border-radius: 6.25rem;
+        }
+       
+    }
+    &nav {
+        svg {
+            width: 1.5rem;
+            path {
+                stroke: white;
+            }
+        }
+    }
+}
+.slider {
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 11.5625rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
