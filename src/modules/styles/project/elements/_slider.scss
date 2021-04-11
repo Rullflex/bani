@@ -27,8 +27,37 @@
             path {
                 stroke: white;
             }
+            
         }
     }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .slide {
+        &dots {
+            &>* {
+                padding: 0 4px;
+                &>* {
+                    width: 16px;
+                    height: 16px;
+                    &:hover, &:focus {
+                    }
+                }
+            }
+            &>.uk-active>* {
+                width: 65px;
+                border-radius: 8px;
+            }
+           
+        }
+        &nav {
+            svg {
+                width: 59px;
+                path {
+                }
+                
+            }
+        }
+    }         
 }
 .slider {
     &-nav {
@@ -38,5 +67,8 @@
         width: 11.5625rem;
         margin-left: auto;
         margin-right: auto;
+        @media (min-width: map-get($grid-breakpoints, md)) {
+            width: 353px;
+        }
     }
 }

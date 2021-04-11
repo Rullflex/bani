@@ -41,10 +41,10 @@
         }
     }
     &-outline {
-        @mixin btn-outline($btn-color) {
-            border: 0.0625rem solid $btn-color;
+        @mixin btn-outline($btn-color, $font-color) {
+            border: 0.125rem solid $btn-color;
             background: transparent;
-            color: $btn-color;
+            color: $font-color;
             &:active {
                 background: $btn-color;
                 color: $text-light;
@@ -57,7 +57,7 @@
             }
         }
         &-primary {
-            @include btn-outline($primary);
+            @include btn-outline($primary, #8A8A8A);
         }
     }
 }

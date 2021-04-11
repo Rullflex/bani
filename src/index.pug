@@ -10,12 +10,42 @@ block header
 			.header__row
 				a.header__logo(href="/")
 					+picture(png, `${assets}logo`, 'n')
+				.header__adress
+					+icon('pin')
+					p Саратов#[br] ул. Панфилова 53
 				.header__contacts 
 					+icon('hphones')
 					div
 						a.header__contacts-tel(href!=phoneLink)= phoneNumber
 						.header__contacts-range Каждый день с 8:00-20:00
+				a.header__btn.uk-button.btn-outline-primary(href="#callback") Заказать обратный звонок
 
+block footer
+	footer.footer 
+		.container
+			.footer__row
+				.footer__contacts 
+					+icon('hphones')
+					div
+						a.footer__contacts-tel(href!=phoneLink)= phoneNumber
+						.footer__contacts-range Каждый день с 8:00-20:00
+				.footer__icons 
+					a(href!=ytLink target="_blank")
+						+icon('yt')
+					a(href!=instLink target="_blank")
+						+icon('inst')
+					a(href!=vkLink target="_blank")
+						+icon('vk')
+				.footer__adress
+					+icon('pin')
+					p Саратов#[br] ул. Панфилова 53
+				a.footer__logo(href="/")
+					+picture(png, `${assets}logo`, 'n')
+				.footer__creds 
+					.footer__ogr ОГРНИП 320645100031188
+					.footer__ip ИП Валиулин Руслан Надирович
+					.footer__c © 2021 Все права защищены.
+					a.footer__policy(href=privacyLink target="_blank") Политика конфиденциальности
 
 block content
 	main.main
@@ -50,7 +80,7 @@ block content
 			.container 
 				form.s2__form(action="#") 
 					+picture(png, `${assets}s2-strill`, 'sm').s2__img-strill
-					p.s2__form-title Рассчитаем стоимость#[br] бани за 5 минут
+					p.s2__form-title Рассчитаем стоимость#[br.d-lg-none] бани за 5 минут
 					.s2__form-inputs
 						.input-wrap 
 							input.s2__form-input.input(type="text" name="Имя" placeholder="Введите имя")
@@ -59,39 +89,43 @@ block content
 						button.s2__form-submit.uk-button.btn-solid-primary(type="submit") Рассчитать 
 					//- p.s2__form-agreement Нажимая на кнопку «Отправить», Вы соглашаетесь на обработку Ваших персональных данных в соответствии с Политикой конфиденциальности
 		section.s3 
+			.s3__bg.ibg 
+				+picture(jpg, `${assets}s3-bg`, 'sml')
 			.container 
-				h2.s3__title Мы уверены в своих банях — #[span.text-green качество подвердили 1170 наших клиентов]
+				h2.s3__title Мы уверены в своих банях —#[br.d-none.d-lg-inline] #[span.text-green качество подвердили 1170 наших клиентов]
 				ul.s3__list 
 					li.s3__item
 						+picture(png, `${assetsIco}head`, 'n').s3__item-img
 						.s3__item-title Видеообзоры, онлайн и оффлайн#[br] экскурсии по строительной площадке
-						.s3__item-descr Мы знаем, как важно для вас качество,#[br] поэтому  честно показываем все этапы#[br] работ
+						.s3__item-descr Мы знаем, как важно для вас качество,#[br] поэтому  честно показываем все этапы#[br.d-md-none] работ
 					li.s3__item
 						+picture(png, `${assetsIco}wallet`, 'n').s3__item-img
 						.s3__item-title Фиксируем цену 
 						.s3__item-descr Предоплата всего 1000₽ и договор#[br] вступает в силу, текущая стоимость бани#[br] остается за вами
 					li.s3__item
 						+picture(png, `${assetsIco}cube`, 'n').s3__item-img
-						.s3__item-title Реализуем любой проект по вашим размерам и предпочтениям
-						.s3__item-descr Если к вашему участку не проедет манипулятор,  мы строим бани у вас#[br] на месте
+						.s3__item-title Реализуем любой проект по вашим#[br] размерам и предпочтениям
+						.s3__item-descr Если к вашему участку не проедет манипулятор,  мы строим бани у вас#[br.d-md-none] на месте
 					li.s3__item
 						+picture(png, `${assetsIco}cask`, 'n').s3__item-img
 						.s3__item-title Более 40 монтажников и 2 производства
 						.s3__item-descr Гарантия создания бани за 10 дней, благодаря собственному производству и строгому контролю качества
 					li.s3__item
 						+picture(png, `${assetsIco}pig`, 'n').s3__item-img
-						.s3__item-title Предлагаем рассрочку от 3 до 6 месяцев без посредников
+						.s3__item-title Предлагаем рассрочку от 3 до 6#[br] месяцев без посредников
 						.s3__item-descr Баня — не заоблачная мечта, а достижимая.#[br] С рассрочкой ваша цель ставится ближе
 					li.s3__item
 						+picture(png, `${assetsIco}shield-ok`, 'n').s3__item-img
 						.s3__item-title Гарантия на бани 5 лет
 						.s3__item-descr Несем ответственность за качество бани, приобретенной у нас
 		section.s4 
+			.s4__ibg.ibg.d-none.d-lg-block 
+				+picture(jpg, `${assets}s4-bg`, 'n')
 			.container 
 				h2.s4__title Наши #[span.text-green проекты]
-				.s4__slider(data-uk-slider="center: true;")
+				.s4__slider
 					.s4__slider-container.uk-slider-container
-						ul.uk-slider-items 
+						ul.s4__slider-items.uk-slider-items 
 							li.s4__slider-item
 								.s4__slider-ibg.ibg 
 									+picture(jpg, `${assets}s4-i1`, 'sm')
@@ -187,18 +221,17 @@ block content
 				+picture(jpg, `${assets}s6-bg`, 'sml').s6__img-bg
 				h2.s6__title  Вентилируемый каркас обеспечивает #[span.text-green срок службы более 10 лет ]
 				ul.s6__list 
-					li.s6__item
+					li.s6__item.s6__item--1
 						.s6__item-text Разогрев температуры до 100С#[br] #[strong за 1 час]
-					li.s6__item
+					li.s6__item.s6__item--2
 						.s6__item-text Предоставляем гарантию#[br] #[strong до 5 лет]
-					li.s6__item
+					li.s6__item.s6__item--3
 						.s6__item-text Мобильные строения #[strong не#[br] облагаются] налогом
-					li.s6__item
+					li.s6__item.s6__item--4
 						.s6__item-text Срок службы #[strong 1/4+ века за счёт]#[br] скандинавской технологии
-					li.s6__item
+					li.s6__item.s6__item--5
 						.s6__item-text Держит тепло #[strong до 20 часов]#[br] Невероятная выдержка 
-
-					li.s6__item
+					li.s6__item.s6__item--6
 						.s6__item-text Низ бани обработан #[strong битумной#[br] мастикой] защищая от гниения
 		section.s7 
 			.container 
@@ -208,11 +241,13 @@ block content
 					a.s7__play(href="#video" data-uk-toggle)
 						+icon('play-btn')
 		section.s8 
+			.s8__ibg.ibg.d-none.d-lg-block 
+				+picture(jpg, `${assets}s8-bg`, 'n')
 			.container 
 				h2.s8__title Каталог #[span.text-green бань]
-				.s8__slider(data-uk-slider="center: true;")
+				.s8__slider
 					.s8__slider-container.uk-slider-container
-						ul.uk-slider-items 
+						ul.s8__slider-items.uk-slider-items 
 							- for(var x = 1; x <= 5; x++)
 								li.s8__slider-item
 									.s8__slider-ibg.ibg 
@@ -228,8 +263,17 @@ block content
 											span 1,65х2,2м
 									.s8__slider-divider
 									.s8__slider-text Не дорогой и очень функциональный вариант! В комплектацию входит электрика (свет, розетки, выключатели, электро-автоматы), дровяная печь, бак для горячей воды на 55 литров, полки в парном помещении. В данной модели имеется отдельная раздевалка (входная зона) и В комплектацию входит электрика (свет, розетки, выключатели, эро-автоматы),
-									a.s8__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Оставьте заявку и узнайте подробнее
+									a.s8__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Ознакомиться с предложением
+							li.s8__slider-item.s8__slider-item--last
+								.s8__slider-item-title Хочу индивидуальный#[br] проект под ключ
+								+icon('rounded-plus')
+								a.s8__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Оставьте заявку и узнайте подробнее
 					+slider-nav().s8__slider-nav
+				.s8__wa.d-none.d-lg-flex 
+					.s8__wa-title  Ознакомьтесь с полным каталогом бань в WhatsApp
+					a.s8__wa-btn.uk-button.btn-solid-primary(href="#") 
+						+icon('wa')
+						span Перейти в WhatsApp
 		section.s9
 			.container 
 				h2.s9__title Наши #[span.text-green отзывы]
@@ -244,9 +288,38 @@ block content
 										svg(width="129" height="130" viewBox="0 0 129 130" fill='none' xmlns='http://www.w3.org/2000/svg' preserveAspectRatio="none")
 											circle(cx="64.7239" cy="64.7835" r="64.2601" fill="white")
 											path(d="M64.7246 10.2834C34.3494 10.2834 9.72461 34.6839 9.72461 64.7834C9.72461 94.883 34.3494 119.283 64.7246 119.283C95.0999 119.283 119.725 94.883 119.725 64.7834C119.725 34.6839 95.0999 10.2834 64.7246 10.2834ZM83.734 67.6724L56.234 84.7036C55.6775 85.0479 55.0448 85.2209 54.4121 85.2209C53.8389 85.2209 53.2648 85.0796 52.7454 84.7935C51.6527 84.1931 50.9746 83.0537 50.9746 81.8147V47.7522C50.9746 46.5132 51.6527 45.3738 52.7454 44.7734C53.838 44.1697 55.1742 44.2063 56.234 44.8633L83.734 61.8945C84.7386 62.5183 85.3496 63.6094 85.3496 64.7834C85.3496 65.9575 84.7386 67.0488 83.734 67.6724Z" fill="#96C12A")
-					+slider-nav().s9__slider-nav
+					+slider-nav().s9__slider-nav.d-lg-none
+					.s9__slider-nav.d-none.d-lg-flex
+						a.s9__slider-nav-angle(href="#" data-uk-slider-item="previous")
+							+icon('angle-left')
+						a.s9__slider-nav-angle(href="#" data-uk-slider-item="next")
+							+icon('angle-right')
 		section.s10 
-			.container 
-				h2.s10__title Контакты
+			.s10__container.container 
+				.s10__nav
+					h2.s10__title Контакты
+					.d-none.d-lg-block 	
+						a.s10__nav-btn.active(href="#") Производство Саратов
+						a.s10__nav-btn(href="#") Производство Энгельс
+						a.s10__nav-btn(href="#") Выставочная зона 
 				.s10__map-wrap 
-					.s10__map
+					.s10__map.ibg
+						+picture(jpg, `${assets}s10-map`, 'sml').s10__map-img
+					.s10__map-badge
+						.s10__map-title Производство и#[br] отдел продаж:
+						.s10__map-adress Саратов#[br] ул. Панфилова 53  
+						a.s10__map-tel(href="tel:79272253387") +7 (927) 225-33-87
+				.s10__map-wrap.d-lg-none
+					.s10__map.ibg
+						+picture(jpg, `${assets}s10-map`, 'sml').s10__map-img
+					.s10__map-badge
+						.s10__map-title Производство и#[br] отдел продаж:
+						.s10__map-adress Энгельс#[br] ул. Банный остров 7
+						a.s10__map-tel(href="tel:79670777662") +7 (967) 077-76-62
+				.s10__map-wrap.d-lg-none
+					.s10__map.ibg
+						+picture(jpg, `${assets}s10-map`, 'sml').s10__map-img
+					.s10__map-badge
+						.s10__map-title Производство и#[br] отдел продаж:
+						.s10__map-adress Саратов#[br] Вольский тракт 2А/2
+						a.s10__map-tel(href="tel:79670777662") +7 (967) 077-76-62
