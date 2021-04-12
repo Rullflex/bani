@@ -4,7 +4,7 @@
     align-items: center;
     padding: 0;
 
-    transition: $transition--hover;
+    // transition: $transition--hover;
 
 }
 
@@ -24,18 +24,21 @@
             background: linear-gradient(180deg, #A8D538 0%, #79A017 100%);
             box-shadow: 0px 2.57982px 6.44956px rgba(99, 133, 14, 0.44);
             &:active {
-                box-shadow: 0px 1px 3px rgba(99, 133, 14, 0.44);
+                background: linear-gradient(180deg, #79A017 0%, #A8D538 100%);
+                font-weight: 800;
             }
             @media (min-width: map-get($grid-breakpoints, md)) {
                 box-shadow: 0px 4px 10px rgba(99, 133, 14, 0.44);
             }
             @media (min-width: map-get($grid-breakpoints, lg)) {
-                &:focus {
-                    box-shadow: 0px 2px 4px rgba(99, 133, 14, 0.44);
+                &:focus-visible {
+                    background: linear-gradient(180deg, #79A017 0%, #A8D538 100%);
+                    font-weight: 800;
                 }
                 &:hover {
                     color: $text-light !important;
-                    box-shadow: 0px 2px 4px rgba(99, 133, 14, 0.44);
+                    background: linear-gradient(180deg, #79A017 0%, #A8D538 100%);
+                    font-weight: 800;
                 }
             }
         }
@@ -45,6 +48,7 @@
             border: 0.125rem solid $btn-color;
             background: transparent;
             color: $font-color;
+            transition: $transition--hover;
             &:active {
                 background: $btn-color;
                 color: $text-light;

@@ -1,2 +1,38 @@
 @import 'popups/callback';
-@import 'popups/thanks'
+@import 'popups/thanks';
+#promo {
+    .popup {
+        &__body {
+            width: 18.75rem;
+            border-radius: 1.375rem;
+            overflow: hidden;
+        }
+        &__close {
+            color: white;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    #promo {
+        .popup {
+            &__body {
+                width: 700px;
+                border-radius: 22px;
+            }
+            &__close {
+            }
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, lg)) {
+    #promo {
+        .popup {
+            &__body {
+                width: 1246px;
+                border-radius: 25px;
+            }
+            &__close {
+            }
+        }
+    }
+}
