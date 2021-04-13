@@ -27,7 +27,12 @@ h2 {
     background: linear-gradient(180deg, #FF7777 0%, #E9284A 100%);
     box-shadow: 0px 5.31128px 13.2782px rgba(132, 0, 0, 0.44);
     border-radius: 50%;
+
     transition: $transition--hover;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(100px);
+
     position: fixed;
     bottom: 61px;
     right: 54px;
@@ -46,11 +51,20 @@ h2 {
         text-align: center;
         color: #FFFFFF;
     }
+    &.visible {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 0.5rem;
+    height: 0.5rem;
     border: unset;
+    @media (min-width: map-get($grid-breakpoints, md)) {
+        width: 10px;
+        height: 10px;
+    }
 }
   
 ::-webkit-scrollbar-thumb {

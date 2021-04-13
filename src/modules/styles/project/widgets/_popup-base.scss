@@ -55,8 +55,7 @@
 }
 @media (min-width: map-get($grid-breakpoints, md)) {
     .popup {
-        padding-top: 2.5rem;
-        padding-bottom: 2.5rem;
+        padding: 2.5rem 0;
         &__img {
             &-strill {
                 width: 230px;

@@ -1,5 +1,6 @@
 @import 'popups/callback';
 @import 'popups/thanks';
+@import 'popups/bani-item';
 #promo {
     .popup {
         &__body {
@@ -33,6 +34,17 @@
             }
             &__close {
             }
+        }
+    }
+}
+#video {
+    .popup {
+        &__body {
+            @media (min-width: map-get($grid-breakpoints, md)) {
+                width: 80vw;
+            }
+        }
+        &__close {
         }
     }
 }

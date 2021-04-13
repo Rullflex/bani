@@ -1,0 +1,263 @@
+.banya {
+    .popup {
+        &__body {
+            width: 20rem;
+            padding: 1rem 0.625rem 1.5rem;
+            border-radius: unset;
+        }
+        &__close {
+        }
+    }
+    &__about {
+
+    }
+    &__head {
+        position: relative;
+        padding-bottom: 0.625rem;
+        &-title {
+            font-weight: bold;
+            font-size: 1.5625rem;
+            color: #434343;
+        }
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #929292;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+    }
+    &__scales {
+
+    }
+    &__scale {
+        display: inline-flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-right: 1.25rem;
+        }
+        &-img {
+            &--1 {
+                width: 1.375rem;
+                margin-right: 0.5rem;
+            }
+            &--2 {
+                width: 1.1875rem;
+                margin-right: 0.75rem;
+            }
+        }
+        &-text {
+            font-size: 1.25rem;
+            color: #767676;
+        }
+    }
+    &__price {
+        font-size: 1.0625rem;
+        color: $primary;
+        margin-bottom: 0.625rem;
+        strong {
+            font-weight: bold;
+            font-size: 1.8125rem;
+        }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.36em;
+        color: #565656;
+    }
+    &__dims {
+        font-weight: 600;
+        font-size: 1.125rem;
+        line-height: 1.36em;
+        color: #565656;
+    }
+    &__points {
+        font-size: 0.875rem;
+        line-height: 1.7em;
+        color: #565656;
+        margin-top: 0.3125rem;
+        margin-bottom: 1.875rem;
+    }
+    &__notice {
+        font-weight: 200;
+        font-size: 0.6875rem;
+        line-height: 1.4em;
+        color: #565656;
+        margin-bottom: 1.875rem;
+    }
+    &__slider {
+        width: 18.75rem;
+        height: 13.0625rem;
+        margin: 0 auto;
+        &-item {
+            width: 18.75rem;
+            height: 13.0625rem;
+        }
+    }
+    &__btn {
+        width: 15.625rem;
+        line-height: 3.75rem;
+        font-size: 1rem;
+        margin: 3.125rem auto;
+        border-radius: 3.125rem;
+    }
+    &__chars {
+        overflow-x: scroll;
+        padding-bottom: 1.6875rem;
+        &-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+            color: #000000;
+            margin-bottom: 0.625rem;
+        }
+        &-i {
+            width: 580px;
+            display: flex;
+            line-height: 2.1em;
+            font-size: 0.75rem;
+            border-bottom: 1px solid #D2D2D2;
+            &title {
+                width: 13.625rem;
+                color: #000000;
+                
+            }
+            &descr {
+                width: 22.5rem;
+                color: #627486;
+            }
+            .fw-600 {
+                font-weight: 600;
+            }
+        }
+        &-dop {
+            width: 19.375rem;
+            font-size: 0.75rem;
+            line-height: 2.1em;
+            color: #7998BC;
+        }
+    }
+}
+@media (min-width: map-get($grid-breakpoints, md)) {
+    .banya {
+        .popup {
+            &__body {
+                width: 768px;
+                padding: 50px 58px 77px;
+            }
+            &__close {
+            }
+        }
+        &__about {
+    
+        }
+        &__head {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 0.625rem;
+            &-title {
+                font-size: 32px;
+            }
+            &::after {
+            }
+        }
+        &__scales {
+    
+        }
+        &__scale {
+            &:not(:last-child) {
+            }
+            &-img {
+                &--1 {
+                   
+                }
+                &--2 {
+                   
+                }
+            }
+            &-text {
+            }
+        }
+        &__price {
+            font-size: 22px;
+            margin-bottom: 0;
+            strong {
+                font-size: 37px;
+            }
+        }
+        &__title {
+            display: inline-block;
+            width: 351px;
+            font-size: 21px;
+        }
+        &__dims {
+            display: inline-block;
+            width: 280px;
+            font-size: 21px;
+        }
+        &__points {
+            font-size: 16px;
+            margin-top: 24px;
+            margin-bottom: 100px;
+        }
+        &__notice {
+            width: 450px;
+            font-size: 0.75rem;
+            margin-bottom: 37px;
+        }
+        &__slider {
+            width: 651px;
+            height: 524px;
+            &-item {
+                width: 651px;
+                height: 524px;
+            }
+        }
+        &__btn {
+            width: 15.625rem;
+            line-height: 3.75rem;
+            font-size: 1rem;
+            margin: 3.125rem auto;
+            border-radius: 3.125rem;
+        }
+        &__chars {
+            overflow-x: scroll;
+            padding-bottom: 1.6875rem;
+            &-title {
+                font-weight: 600;
+                font-size: 1.125rem;
+                color: #000000;
+                margin-bottom: 0.625rem;
+            }
+            &-i {
+                width: 580px;
+                display: flex;
+                line-height: 2.1em;
+                font-size: 0.75rem;
+                border-bottom: 1px solid #D2D2D2;
+                &title {
+                    width: 13.625rem;
+                    color: #000000;
+                    
+                }
+                &descr {
+                    width: 22.5rem;
+                    color: #627486;
+                }
+                .fw-600 {
+                    font-weight: 600;
+                }
+            }
+            &-dop {
+                width: 19.375rem;
+                font-size: 0.75rem;
+                line-height: 2.1em;
+                color: #7998BC;
+            }
+        }
+    }
+}
