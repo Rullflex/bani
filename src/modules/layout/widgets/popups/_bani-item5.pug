@@ -1,43 +1,43 @@
-+popup#bani-item1.banya
++popup#bani-item5.banya
     .banya__about 
         .banya__head 
-            .banya__head-title «Народный выбор»
+            .banya__head-title «Быстро Жар» 
             .banya__scales 
                 .banya__scale
                     +picture(png, `${assetsIco}scales`, 'n').banya__scale-img--1
-                    .banya__scale-text 4х2,4
+                    .banya__scale-text 3х2,4
                 .banya__scale
                     +picture(png, `${assetsIco}user`, 'n').banya__scale-img--2
-                    .banya__scale-text 4+ чел.
+                    .banya__scale-text 3+ чел.
         .banya__slider(data-uk-slider)
-            - var numberOfItems = 6
+            - var numberOfItems = 3
             .banya__slider-container.uk-slider-container
                 ul.uk-slider-items
                     - for (var i = 1; i <= numberOfItems; i++)
                         li.banya__slider-item
-                            +picture(jpg, `${assets}banya1-i${i}`, 'n')
+                            +picture(jpg, `${assets}banya5-i${i}`, 'n')
             .banya__slider-nav
                 a.slidenav-btn.slidenav-prev.d-none.d-md-inline(href="#" data-uk-slider-item="previous")
                         +icon('angle-left')
                 .slidegal
                     - for(var i = 1; i <= numberOfItems; i++)
                         .slidegal-item(class=`${i == 1 ? 'active' : ''}`)
-                           +picture(jpg, `${assets}banya1-i${i}-min`, 'n')
+                           +picture(jpg, `${assets}banya5-i${i}-min`, 'n')
                 a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
                     +icon('angle-right')
 
-        .banya__price.d-md-none От #[strong 185 900]р.
-        .banya__title Каркасная Баня «Народный выбор» с&nbsp;двух скатной кровлей
+        .banya__price.d-md-none От #[strong 144 900]р.
+        .banya__title Каркасная Баня «Быстро Жар» с&nbsp;террасой 2х3м
         .banya__dims 
-            p - габариты 4х2.4
-            p - вместимость 4+ чел.
+            p - габариты 3х2.4
+            p - вместимость 3+ чел.
         .banya__points 
-            p - утепление только парной 170 900 ₽ (утепляется только парное отделение, без утепления пола.)
-            p - вся утеплена, кроме пола 184 900 ₽ (вся баня утеплена кроме пола во всей бане)
-            p - полностью утепленная 199 000 ₽ Доп. опция "двускатная кровля" + 15 000 ₽.
+            p - утепление только парной 144 900 ₽ (утепляется только парное отделение, без утепления пола.) 
+            p - вся утеплена, кроме пола 154 900 ₽ (вся баня утеплена кроме пола во всей бане) 
+            p - полностью утепленная 164 900 ₽. Доп. опция: терраса 2х3 при заказе бани с учетом скидки 27 000 ₽
         .banya__newcomer.d-none.d-md-flex
             a.banya__btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Оставить заявку
-            .banya__price От #[strong 185 900]р.
+            .banya__price От #[strong 144 900]р.
         .banya__notice Размеры, планировка и комплектация Бани могут меняться в Зависимости от&nbsp;расположения на участке и желаний «Заказчика». Уточняйте у Менеджера
         a.banya__btn.uk-button.btn-solid-primary.d-md-none(href="#callback" data-uk-toggle) Оставить заявку
     .banya__chars
@@ -54,10 +54,10 @@
                 .banya__chars-idescr брус сечением не менее 45х95мм
             li.banya__chars-i 
                 .banya__chars-ititle Фасад
-                .banya__chars-idescr имитация бруса 135
+                .banya__chars-idescr профлист 20, цвет  «слоновая кость», «шоколад», «зеленый»*
             li.banya__chars-i 
                 .banya__chars-ititle Отделка
-                .banya__chars-idescr евро-вагонка «сосна», «липа»*, «осина»*, «кедр»*
+                .banya__chars-idescr шпунтовая доска 28мм «проливные» 
             li.banya__chars-i 
                 .banya__chars-ititle.fw-600 Утепление
                 .banya__chars-idescr 
@@ -84,11 +84,11 @@
                 .banya__chars-idescr натрубный бак на 55 литров
             li.banya__chars-i 
                 .banya__chars-ititle Дверь входная
-                .banya__chars-idescr клиновая «сосна», *пластиковая со стеклом, *металлическая
+                .banya__chars-idescr клиновая «сосна», пластиковая со стеклом \металлическая*
             li.banya__chars-i 
                 .banya__chars-ititle Дверь в парную
                 .banya__chars-idescr каркасная «Липа», *термо-стекло
             li.banya__chars-i 
                 .banya__chars-ititle Окно
-                .banya__chars-idescr деревянное со стеклопакетом, *пластиковая
+                .banya__chars-idescr деревянное со стеклопакетом, пластиковая*
         .banya__chars-dop * - дополнительная опция/зависит от комплектации

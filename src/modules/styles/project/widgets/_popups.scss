@@ -37,7 +37,7 @@
         }
     }
 }
-#video {
+.popup-video {
     .popup {
         &__body {
             @media (min-width: map-get($grid-breakpoints, md)) {

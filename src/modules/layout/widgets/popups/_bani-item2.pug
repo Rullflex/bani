@@ -1,43 +1,44 @@
-+popup#bani-item1.banya
++popup#bani-item2.banya
     .banya__about 
         .banya__head 
-            .banya__head-title «Народный выбор»
+            .banya__head-title «Семейная»
             .banya__scales 
                 .banya__scale
                     +picture(png, `${assetsIco}scales`, 'n').banya__scale-img--1
-                    .banya__scale-text 4х2,4
+                    .banya__scale-text 5х2,4
                 .banya__scale
                     +picture(png, `${assetsIco}user`, 'n').banya__scale-img--2
-                    .banya__scale-text 4+ чел.
+                    .banya__scale-text 5+ чел.
         .banya__slider(data-uk-slider)
-            - var numberOfItems = 6
+            - var numberOfItems = 5
             .banya__slider-container.uk-slider-container
                 ul.uk-slider-items
                     - for (var i = 1; i <= numberOfItems; i++)
                         li.banya__slider-item
-                            +picture(jpg, `${assets}banya1-i${i}`, 'n')
+                            +picture(jpg, `${assets}banya2-i${i}`, 'n')
             .banya__slider-nav
                 a.slidenav-btn.slidenav-prev.d-none.d-md-inline(href="#" data-uk-slider-item="previous")
                         +icon('angle-left')
                 .slidegal
                     - for(var i = 1; i <= numberOfItems; i++)
                         .slidegal-item(class=`${i == 1 ? 'active' : ''}`)
-                           +picture(jpg, `${assets}banya1-i${i}-min`, 'n')
+                           +picture(jpg, `${assets}banya2-i${i}-min`, 'n')
                 a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
                     +icon('angle-right')
 
-        .banya__price.d-md-none От #[strong 185 900]р.
-        .banya__title Каркасная Баня «Народный выбор» с&nbsp;двух скатной кровлей
+        .banya__price.d-md-none От #[strong 202 900]р.
+        .banya__title Каркасная Баня «Семейная»
         .banya__dims 
-            p - габариты 4х2.4
-            p - вместимость 4+ чел.
+            p - габариты 3х2.4
+            p - вместимость 3+ чел.
         .banya__points 
-            p - утепление только парной 170 900 ₽ (утепляется только парное отделение, без утепления пола.)
-            p - вся утеплена, кроме пола 184 900 ₽ (вся баня утеплена кроме пола во всей бане)
-            p - полностью утепленная 199 000 ₽ Доп. опция "двускатная кровля" + 15 000 ₽.
+            p - утепление только парной 202 900 ₽ (утепляется только парное отделение, без утепления пола.)
+            p - вся утеплена, кроме пола 220 900 ₽ (вся баня утеплена кроме пола во всей бане)
+            p - полностью утепленная 238 900 ₽
+              
         .banya__newcomer.d-none.d-md-flex
             a.banya__btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Оставить заявку
-            .banya__price От #[strong 185 900]р.
+            .banya__price От #[strong 202 900]р.
         .banya__notice Размеры, планировка и комплектация Бани могут меняться в Зависимости от&nbsp;расположения на участке и желаний «Заказчика». Уточняйте у Менеджера
         a.banya__btn.uk-button.btn-solid-primary.d-md-none(href="#callback" data-uk-toggle) Оставить заявку
     .banya__chars
@@ -54,10 +55,10 @@
                 .banya__chars-idescr брус сечением не менее 45х95мм
             li.banya__chars-i 
                 .banya__chars-ititle Фасад
-                .banya__chars-idescr имитация бруса 135
+                .banya__chars-idescr профлист 20, цвет «слоновая кость», *«шоколад», *«зеленый»
             li.banya__chars-i 
                 .banya__chars-ititle Отделка
-                .banya__chars-idescr евро-вагонка «сосна», «липа»*, «осина»*, «кедр»*
+                .banya__chars-idescr вагонка «сосна», «липа»*, «осина»*, «кедр»*
             li.banya__chars-i 
                 .banya__chars-ititle.fw-600 Утепление
                 .banya__chars-idescr 

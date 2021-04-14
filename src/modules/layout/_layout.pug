@@ -10,6 +10,8 @@ html(lang="ru")
 			meta(name="format-detection" content="telephone=no")
 			meta(content="ie=edge" http-equiv="x-ua-compatible")
 			meta(property="og:image" content=`/ogimage.jpg`)
+			<meta name="yandex-verification" content="c94c97910fd7f1fc" />
+			<meta name="google-site-verification" content="SmXxYj-q3olRdkZZjk5U7WScehKTzo7rH0EvPt9ugA4" />
 			
 			link(rel="stylesheet" href!=stylesPath)
 
@@ -26,3 +28,23 @@ html(lang="ru")
 				include widgets/_popups
 		block scripts
 			script(src!=scriptsPath defer)
+			//- Marquiz script start 
+			script(defer).
+				(function(w, d, s, o){
+				var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
+					if (document.readyState !== 'loading') Marquiz.init(o);
+					else document.addEventListener("DOMContentLoaded", function() {
+					Marquiz.init(o);
+					});
+				};
+				d.head.insertBefore(j, d.head.firstElementChild);
+				})(window, document, 'script', {
+					host: '//quiz.marquiz.ru',
+					region: 'eu',
+					id: '60686bbdd6512900444a6d73',
+					autoOpen: false,
+					autoOpenFreq: 'once',
+					openOnExit: false,
+					disableOnMobile: false
+				}
+				);
