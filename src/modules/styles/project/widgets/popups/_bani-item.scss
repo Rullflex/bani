@@ -121,6 +121,14 @@
                         }
                     }
                 }
+                &-prev {
+                    
+                }
+                &-next {
+                    position: absolute;
+                    top: 0.7rem;
+                    transform: translateX(0.5rem);
+                }
             }
         }
     }
@@ -249,7 +257,7 @@
             &-nav {
                 margin-top: 23px;
                 .slidegal {
-                    max-width: 95%;
+                    max-width: 100%;
                     padding-bottom: 14px;
                     &-item {
                         margin-right: 10px;
@@ -270,11 +278,14 @@
                         }
                     }
                     &-prev {
-                        margin-left: -20px;
-                        margin-right: 5px;
+                        position: absolute;
+                        top: 27px;
+                        left: -20px;
                     }
                     &-next {
-                        margin-left: 5px;
+                        top: 27px;
+                    }
+                    &-next {
                     }
                 }
             }

@@ -1417,7 +1417,8 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        z-index: -3;
+        z-index: 2;
+        pointer-events: none;
     }
     &__title {
     }
@@ -1486,7 +1487,7 @@
             padding-bottom: 175px;
         }
         &__img-bg {
-            width: 716px;
+            width: 712px;
             right: -45px;
         }
         &__title {
@@ -1566,7 +1567,7 @@
         }
         &__img-bg {
             pointer-events: none;
-            width: 1082px;
+            width: 1049px;
             right: -53px;
         }
         &__title {
@@ -1921,7 +1922,7 @@
                     width: 10.5rem;
                 }
                 .s8__slider-btn {
-                    margin-top: 4rem;
+                    margin-top: 4.9rem;
                 }
             }
         }
@@ -2019,7 +2020,7 @@
                         width: unset;
                     }
                     .s8__slider-btn {
-                        margin-top: 87px;
+                        margin-top: 89px;
                     }
                 }
             }

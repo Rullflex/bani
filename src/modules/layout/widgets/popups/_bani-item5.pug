@@ -10,19 +10,19 @@
                     +picture(png, `${assetsIco}user`, 'n').banya__scale-img--2
                     .banya__scale-text 3+ чел.
         .banya__slider(data-uk-slider)
-            - var numberOfItems = 3
+            - var numberOfItems = 6
             .banya__slider-container.uk-slider-container
                 ul.uk-slider-items
                     - for (var i = 1; i <= numberOfItems; i++)
                         li.banya__slider-item
-                            +picture(jpg, `${assets}banya5-i${i}`, 'n')
+                            +picture(jpg, `${assets}banya1-i${i}`, 'n')
             .banya__slider-nav
                 a.slidenav-btn.slidenav-prev.d-none.d-md-inline(href="#" data-uk-slider-item="previous")
                         +icon('angle-left')
                 .slidegal
                     - for(var i = 1; i <= numberOfItems; i++)
                         .slidegal-item(class=`${i == 1 ? 'active' : ''}`)
-                           +picture(jpg, `${assets}banya5-i${i}-min`, 'n')
+                           +picture(jpg, `${assets}banya1-i${i}-min`, 'n')
                 a.slidenav-btn.slidenav-next(href="#" data-uk-slider-item="next")
                     +icon('angle-right')
 
@@ -36,10 +36,10 @@
             p - вся утеплена, кроме пола 154 900 ₽ (вся баня утеплена кроме пола во всей бане) 
             p - полностью утепленная 164 900 ₽. Доп. опция: терраса 2х3 при заказе бани с учетом скидки 27 000 ₽
         .banya__newcomer.d-none.d-md-flex
-            a.banya__btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle) Оставить заявку
+            a.banya__btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle data-descr="Каркасная Баня «Быстро Жар» с террасой") Оставить заявку
             .banya__price От #[strong 144 900]р.
         .banya__notice Размеры, планировка и комплектация Бани могут меняться в Зависимости от&nbsp;расположения на участке и желаний «Заказчика». Уточняйте у Менеджера
-        a.banya__btn.uk-button.btn-solid-primary.d-md-none(href="#callback" data-uk-toggle) Оставить заявку
+        a.banya__btn.uk-button.btn-solid-primary.d-md-none(href="#callback" data-uk-toggle data-descr="Каркасная Баня «Быстро Жар» с террасой") Оставить заявку
     .banya__chars
         .banya__chars-title Общие характеристики
         ul 

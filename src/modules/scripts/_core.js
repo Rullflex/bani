@@ -513,13 +513,14 @@ class Form extends App {
     showSuccess(form) {
         const formData = new FormData(form)
         
-        // if (form.classList.contains(`form-quiz`)) {
-        //     ym(71270149,'reachGoal','quiz')
-        // } else {
-        //     ym(71270149,'reachGoal','form')
-        // }
+        if (form.classList.contains(`form-quiz`)) {
+            ym(71270149,'reachGoal','quiz')
+        } else {
+            ym(71270149,'reachGoal','form')
+        }
         UIkit.modal(`#thanks`).show();
-
+        ym(75096775,'reachGoal','form')
+        setTimeout(() =>  ym(75096775,'reachGoal','form_call'), 10)
         fetch(`${this._apiBase}mail.php`, {
             method: 'post',
             body: formData,

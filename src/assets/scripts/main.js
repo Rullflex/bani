@@ -6,6 +6,19 @@ import { App } from '../../modules/scripts/_core'
 document.addEventListener(`DOMContentLoaded`, function () {
     const app = new App()
     app.init()
+    document.querySelectorAll(`a[href="#callback"]`).forEach((el) => {
+        el.addEventListener(`click`, (ev) => {
+            document.querySelector(`#callback .input-hidden-descr`).value = ev.currentTarget.getAttribute('data-descr') || ''
+        })
+    })
+    document.querySelectorAll(`a[href]`).forEach((el) => {
+        if (el.getAttribute('href').startsWith('tel:')) {
+            el.addEventListener(`click`, (ev) => {
+                ym(75096775,'reachGoal','call')
+                setTimeout(() =>  ym(75096775,'reachGoal','form_call'), 10)
+            })
+        }
+    })
     if (window.innerWidth < app.lg) {
         UIkit.slider('.s4__slider', {
             center: true
