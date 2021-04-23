@@ -774,7 +774,7 @@
             margin-bottom: 1.625rem;
             .s1__item {
                 &-img {
-                    width: 6.45rem;
+                    width: 5.45rem;
                     left: -2rem;
                     top: -0.3125rem;
                 }
@@ -875,9 +875,9 @@
                 margin-bottom: 40px;
                 .s1__item {
                     &-img {
-                        width: 152px;
+                        width: 135px;
                         left: -3rem;
-                        top: -0.4125rem;
+                        top: -1rem;
                     }
                 }
             }
@@ -1585,7 +1585,21 @@
             margin-left: 0px;
         }
         &__item {
+            &--1 {
+                order: 1;
+            }
+            &--2 {
+                order: 3;
+            }
+            &--3 {
+                order: 2;
+            }
+            &--4 {
+                order: 4;
+            }
             &-img {
+                &--1 {
+                }
                 &--2 {
                    
                 }

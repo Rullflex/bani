@@ -18,6 +18,7 @@ block header
 					div
 						a.header__contacts-tel(href!=phoneLink)= phoneNumber
 						.header__contacts-range Каждый день с 8:00-20:00
+				<script data-b24-form="click/12/onktgg" data-skip-moving="true"> (function(w,d,u){ var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0); var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://cdn-ru.bitrix24.ru/b15381732/crm/form/loader_12.js'); </script>
 				a.header__btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle) Заказать обратный звонок
 
 block footer
@@ -205,19 +206,19 @@ block content
 				h2.s5__title #[span.text-green Выберите параметры своей будущей бани,] ответив на 6 простых вопросов
 				.s5__subtitle В конце вы получите бонусы на сумму до 30 000 ₽ и расчет-смету в течение 10 минут
 				ul.s5__list 
-					li.s5__item
+					li.s5__item.s5__item--1
 						+picture(png, `${assets}s5-list-i1`, 'n').s5__item-img.s5__item-img--1
 						.s5__item-title Дверь из липы
 						.s5__item-sub экономия #[span.price 5 000 ₽]
-					li.s5__item
+					li.s5__item.s5__item--2
 						+picture(png, `${assets}s5-list-i2`, 'n').s5__item-img.s5__item-img--2
 						.s5__item-title Потолок из липы
 						.s5__item-sub экономия #[span.price 7 000 ₽]
-					li.s5__item
+					li.s5__item.s5__item--3
 						+picture(png, `${assets}s5-list-i3`, 'n').s5__item-img.s5__item-img--3
-						.s5__item-title Лавки и стол
-						.s5__item-sub экономия #[span.price 16 000 ₽]
-					li.s5__item
+						.s5__item-title Террасы
+						.s5__item-sub скидка #[span.price 30%]
+					li.s5__item.s5__item--4
 						+picture(png, `${assets}s5-list-i4`, 'n').s5__item-img.s5__item-img--4
 						.s5__item-title Камни для печи
 						.s5__item-sub экономия #[span.price 2 000 ₽]

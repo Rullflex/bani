@@ -1,6 +1,28 @@
-+popup(id="thanks")
-    a.popup__logo
++popup#thanks.thanks
+    a.popup__logo.d-none.d-md-block
         +picture(png, `${assets}logo`, 'n')
-    +picture(png, `${modules}popup-banya`, 'n').popup__img-banya
+    +picture(png, `${modules}popup-banya`, 'n').thanks__img-banya
     .popup__title Спасибо что обратились#[br] в компанию #[span.text-primary «Уютный Дом64»]
-    .popup__subtitle Наш менеджер свяжется#[br] в течение 10 минут
+    .popup__subtitle Наш менеджер свяжется c#[br.d-md-none] вами в течение 10 минут
+    .thanks__icons 
+        a(href!=ytLink target="_blank")
+            +icon('yt')
+        a(href!=instLink target="_blank")
+            +icon('inst')
+        a(href!=vkLink target="_blank")
+            +icon('vk')
+    .thanks__block
+        .thanks__block-title Производство и отдел продаж:
+        .thanks__block-flex
+            .thanks__block-adress Саратов#[br] ул. Панфилова 53  
+            a.thanks__block-tel(href="tel:79272253387") +7 (927) 225-33-87
+    .thanks__block
+        .thanks__block-title Выставочная зона и отдел продаж:
+        .thanks__block-flex
+            .thanks__block-adress Саратов#[br] Вольский тракт 2А/2#[br] остановка общественного#[br] транспорта «Мебель Молл» 
+            a.thanks__block-tel(href="tel:79096667057") +7 (909) 666-70-57
+    .thanks__block
+        .thanks__block-title Производство и отдел продаж:
+        .thanks__block-flex
+            .thanks__block-adress Энгельс#[br] ул. Банный остров 7
+            a.thanks__block-tel(href="tel:79670777662") +7 (967) 077-76-62

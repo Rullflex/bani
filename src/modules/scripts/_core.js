@@ -521,6 +521,7 @@ class Form extends App {
         UIkit.modal(`#thanks`).show();
         ym(75096775,'reachGoal','form')
         setTimeout(() =>  ym(75096775,'reachGoal','form_call'), 10)
+        fbq('track', 'Lead')
         fetch(`${this._apiBase}mail.php`, {
             method: 'post',
             body: formData,

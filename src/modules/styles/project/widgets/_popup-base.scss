@@ -8,12 +8,6 @@
             top: -2.5rem;
             left: -6.25rem;
         }
-        &-banya {
-            width: 20.875rem;
-            position: absolute;
-            top: 3.75rem;
-            left: 0;
-        }
     }
     &__body {
         border-radius: 0.625rem;
@@ -61,11 +55,6 @@
                 width: 230px;
                 top: -65px;
                 left: -21px;
-            }
-            &-banya {
-                width: unset;
-                top: 21px;
-                left: 9px;
             }
         }
         &__body {
