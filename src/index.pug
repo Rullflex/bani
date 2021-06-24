@@ -18,7 +18,7 @@ block header
 					div
 						a.header__contacts-tel(href!=phoneLink)= phoneNumber
 						.header__contacts-range Каждый день с 8:00-20:00
-				<script data-b24-form="click/12/onktgg" data-skip-moving="true"> (function(w,d,u){ var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0); var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://cdn-ru.bitrix24.ru/b15381732/crm/form/loader_12.js'); </script>
+				//- <script data-b24-form="click/12/onktgg" data-skip-moving="true"> (function(w,d,u){ var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/180000|0); var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h); })(window,document,'https://cdn-ru.bitrix24.ru/b15381732/crm/form/loader_12.js'); </script>
 				a.header__btn.uk-button.btn-outline-primary(href="#callback" data-uk-toggle) Заказать обратный звонок
 
 block footer
@@ -50,299 +50,39 @@ block footer
 
 block content
 	main.main
-		.container 
-			a.action-btn(href="#promo" data-uk-toggle="")
-					svg(width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg")
-						path(fill-rule="evenodd" clip-rule="evenodd" d="M34.8422 1.29232C31.6243 2.43821 28.0122 5.46216 25.8157 8.84835L24.8594 10.3223L22.8398 8.28538C19.021 4.43417 15.4053 3.38491 13.3504 5.53141C12.7513 6.1575 12.7116 6.31002 12.7116 7.99172C12.7116 9.6629 12.7693 9.88906 13.5593 11.3187C14.0256 12.1624 14.8884 13.4085 15.4768 14.0878C16.0652 14.767 16.5466 15.3764 16.5466 15.4421C16.5466 15.8208 9.60069 13.5463 7.26945 12.4039L5.77183 11.6703L4.58495 12.2523C3.93212 12.5725 3.39807 12.9531 3.39807 13.098C3.39807 13.9748 6.48119 15.5567 11.2872 17.146L14.4648 18.1968L9.20535 18.2106C6.25438 18.2182 3.58259 18.3252 3.11823 18.454C1.98329 18.7692 0.895467 19.7825 0.587133 20.8116C0.445786 21.2834 0.330078 22.7361 0.330078 24.04C0.330078 26.0133 0.40853 26.5728 0.798384 27.378C1.26625 28.3446 2.14655 29.0651 3.17893 29.3268C3.48025 29.403 3.79932 29.5735 3.88786 29.7057C3.97639 29.8378 4.05024 35.3797 4.05222 42.0211L4.0555 54.0963L4.55383 54.8356C4.82776 55.2424 5.38482 55.7994 5.79155 56.0734L6.53094 56.5717H25.4631C43.7453 56.5717 44.4231 56.5572 45.2083 56.1483C45.6553 55.9156 46.2678 55.3559 46.5692 54.9045L47.117 54.084L47.1771 41.7673L47.2371 29.4506L47.9257 29.313C48.8658 29.125 49.94 28.2635 50.3733 27.3501C50.6448 26.7782 50.7329 25.9461 50.7329 23.9554C50.7329 21.1767 50.5672 20.4086 49.7868 19.5706C48.6335 18.3317 48.6997 18.3401 39.2279 18.2217L30.4622 18.1122L32.2153 17.2617C36.0451 15.4038 39.476 14.3109 40.3843 14.6596C40.5736 14.7321 41.0987 15.1618 41.5512 15.6144C43.0833 17.1464 45.2155 16.9763 49.003 15.0203C51.0519 13.962 56.2114 10.6653 56.2114 10.4143C56.2114 10.1476 54.8585 8.14118 54.6785 8.14118C54.5839 8.14118 53.5833 8.74777 52.4551 9.48913C48.5371 12.0641 46.0662 13.3579 44.7124 13.5433C43.8106 13.6669 43.6962 13.6246 43.1376 12.961C42.3472 12.0215 41.3967 11.6475 39.7996 11.6475H38.4944L39.3526 10.1652C40.5099 8.16638 41.0906 6.4277 41.0906 4.96208C41.0906 3.38688 40.6775 2.43295 39.6587 1.65609C38.6016 0.849649 36.5254 0.692742 34.8422 1.29232ZM37.8035 3.97287C38.2794 4.27375 38.1607 5.87393 37.5659 7.17367C36.1987 10.1619 33.0327 13.4571 30.137 14.9066C26.9219 16.5157 25.9724 15.9028 27.0313 12.9021C28.23 9.50403 32.3871 5.30328 35.6749 4.16725C36.9836 3.71516 37.3437 3.68229 37.8035 3.97287ZM17.8733 8.07544C20.3113 9.28379 23.5592 13.3237 23.5592 15.1474C23.5592 16.0036 23.2033 16.0053 21.4133 15.1586C18.8998 13.9693 15.9968 10.5303 15.5366 8.19597C15.4038 7.52254 15.4312 7.48375 16.038 7.48375C16.3908 7.48375 17.2168 7.75001 17.8733 8.07544ZM20.6626 23.8647L20.6008 26.4396L12.4925 26.5007C8.03294 26.5343 4.16244 26.5077 3.89115 26.4418C3.41758 26.3265 3.39807 26.2277 3.39807 23.9519C3.39807 22.6484 3.46382 21.5161 3.54424 21.4359C3.62445 21.3555 7.52299 21.2897 12.2072 21.2897H20.7241L20.6626 23.8647ZM27.456 23.8647L27.3942 26.4396H25.5762H23.758L23.7135 23.8644L23.6688 21.2893L25.5933 21.2895L27.5176 21.2897L27.456 23.8647ZM47.621 21.5527C48.0411 21.9728 47.9725 25.7719 47.5371 26.2073C47.2305 26.5139 46.2139 26.5476 38.8262 26.497L30.4622 26.4396L30.4004 23.8647L30.3388 21.2897H38.8483C45.1748 21.2897 47.4256 21.3572 47.621 21.5527ZM20.6573 41.6152L20.7141 53.7228H14.0721C9.19856 53.7228 7.36039 53.6529 7.16733 53.4599C6.78536 53.0779 6.78821 30.0401 7.1704 29.6579C7.37003 29.4583 9.08263 29.4061 14.0186 29.4497L20.6008 29.5076L20.6573 41.6152ZM27.3942 41.5604V53.6133H25.5823H23.7704L23.7724 42.0535C23.7735 35.6957 23.7753 30.2432 23.7764 29.9371C23.7783 29.3807 23.7799 29.3803 25.5863 29.444L27.3942 29.5076V41.5604ZM43.8119 29.531C44.1222 29.65 44.1586 30.9162 44.1586 41.5797V53.4954L43.6655 53.6157C43.3942 53.6819 40.3126 53.7084 36.8173 53.6746L30.4622 53.6133L30.4052 41.7796C30.3739 35.271 30.3956 29.8227 30.4532 29.6719C30.5338 29.4613 32.0507 29.398 37.0117 29.398C40.5611 29.398 43.6213 29.4578 43.8119 29.531Z" fill="white")
-					span Акция
-		section.s1 
-			.container 
-				+picture-min(jpg, `${assets}s1-bg`, `${assets}s1-bg`, 'sml').s1__img-bg
-				h1.s1__title #[span.text-green Строим каркасные#[br.d-md-none] бани по ГОСТу#[br] и СНиПам] за 10 дней с&nbsp;доставкой по области
-				ul.s1__list 
-					li.s1__item.s1__item--1
-						+picture(png, `${assets}s1-list-i1`, 'n').s1__item-img
-						.s1__item-text Открытое производство с контролем#[br] качества в Саратове и Энгельсе
-					li.s1__item.s1__item--2
-						+picture(png, `${assets}s1-list-i2`, 'n').s1__item-img
-						.s1__item-text Долговечность бани благодаря#[br] каркасу с винтилируемым зазором 
-					li.s1__item.s1__item--3
-						+picture(png, `${assets}s1-list-i3`, 'n').s1__item-img
-						.s1__item-text Гарантия лучшей цены
-				.s1__float 
+		section.s11 
+			.container.s11__container
+				+picture-min(jpg, `${assets}s11-man`, `${assets}s11-man`, 'sm').s11__img-man
+				h1.s11__title Все еще выбираете#[br] компанию #[span.text-green где заказать#[br] баню выгодно?]
+				.s1__float.s11__float
 					+picture(png, `${assets}s1-list-i4`, 'n').s1__float-img
 					.s1__float-text Установка за 1 час#[br] на вашем участке
-		//- section.action
-			.container
-				.action__widget
-					img.action__img-gift1(src=`${modules}gift.png` alt="")
-					img.action__img-gift2(src=`${modules}gift.png` alt="")
-					img.action__img-gift3(src=`${modules}gift.png` alt="")
-					+picture-min(png, `${modules}action-banya`, `${modules}action-banya`, 'sml').action__img-banya
-					p.action__title #[span.text-primary Акция!]#[br] #дарим баню
-					p.action__subtitle Купите баню с 1 апреля по 30 июня и мы вернем 100% от суммы договора!
-					a.action__btn.uk-button.btn-solid-primary(href="#promo" data-uk-toggle="") Узнать подробности
-		section.s2 
-			.container 
-				
-				form.s2__form(action="#") 
-					+picture(png, `${assets}s2-strill`, 'sm').s2__img-strill
-					p.s2__form-title Рассчитаем стоимость#[br.d-lg-none] бани за 5 минут
-					.s2__form-inputs
-						.input-wrap 
-							input.s2__form-input.input(type="text" name="Имя" placeholder="Введите имя")
-						.input-wrap 
-							input.s2__form-input.input.phone(type="tel" name="Телефон" placeholder="Введите номер телефона")
-						button.s2__form-submit.uk-button.btn-solid-primary(type="submit") Рассчитать 
-					//- p.s2__form-agreement Нажимая на кнопку «Отправить», Вы соглашаетесь на обработку Ваших персональных данных в соответствии с Политикой конфиденциальности
-		section.s3 
-			.s3__bg.ibg 
-				+picture(jpg, `${assets}s3-bg`, 'sml')
-			.container 
-				h2.s3__title Мы уверены в своих банях —#[br.d-none.d-lg-inline] #[span.text-green качество подвердили 1170 наших клиентов]
-				ul.s3__list 
-					li.s3__item
-						+picture(png, `${assetsIco}head`, 'n').s3__item-img
-						.s3__item-title Видеообзоры, онлайн и оффлайн#[br] экскурсии по строительной площадке
-						.s3__item-descr Мы знаем, как важно для вас качество,#[br] поэтому  честно показываем все этапы#[br.d-md-none] работ
-					li.s3__item
-						+picture(png, `${assetsIco}wallet`, 'n').s3__item-img
-						.s3__item-title Фиксируем цену 
-						.s3__item-descr Предоплата всего 1000₽ и договор#[br] вступает в силу, текущая стоимость бани#[br] остается за вами
-					li.s3__item
-						+picture(png, `${assetsIco}cube`, 'n').s3__item-img
-						.s3__item-title Реализуем любой проект по вашим#[br] размерам и предпочтениям
-						.s3__item-descr Если к вашему участку не проедет манипулятор,  мы строим бани у вас#[br.d-md-none] на месте
-					li.s3__item
-						+picture(png, `${assetsIco}cask`, 'n').s3__item-img
-						.s3__item-title Более 40 монтажников и 2 производства
-						.s3__item-descr Гарантия создания бани за 10 дней, благодаря собственному производству и строгому контролю качества
-					li.s3__item
-						+picture(png, `${assetsIco}pig`, 'n').s3__item-img
-						.s3__item-title Предлагаем рассрочку от 3 до 6#[br] месяцев без посредников
-						.s3__item-descr Баня — не заоблачная мечта, а достижимая.#[br] С рассрочкой ваша цель ставится ближе
-					li.s3__item
-						+picture(png, `${assetsIco}shield-ok`, 'n').s3__item-img
-						.s3__item-title Гарантия на бани 5 лет
-						.s3__item-descr Несем ответственность за качество бани, приобретенной у нас
-		section.s4 
-			.s4__ibg.ibg.d-none.d-lg-block 
-				+picture(jpg, `${assets}s4-bg`, 'n')
-			.container 
-				h2.s4__title Наши #[span.text-green проекты]
-				.s4__slider
-					.s4__slider-container.uk-slider-container
-						ul.s4__slider-items.uk-slider-items 
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i1-md`, 'n')
-								.s4__slider-title Баня под ключ с отделкой
-								.s4__slider-scales 
-									.s4__slider-scale
-										+picture(png, `${assetsIco}scales`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Габариты
-										.s4__slider-scale-text 2,4м x 3м
-									.s4__slider-scale
-										+picture(png, `${assetsIco}wood`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Доставка
-										.s4__slider-scale-text Манипулятором за 1 час
-									.s4__slider-scale
-										+picture(png, `${assetsIco}3dcube`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Толщина стены
-										.s4__slider-scale-text 1,700 мм
-									.s4__slider-scale
-										+picture(png, `${assetsIco}user`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Вместимость
-										.s4__slider-scale-text 3 человека
-								a.s4__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle data-descr="Баня под ключ с отделкой") Оставьте заявку и узнайте подробнее
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i2-md`, 'n')
-								.s4__slider-title Баня под ключ с отделкой
-								.s4__slider-scales 
-									.s4__slider-scale
-										+picture(png, `${assetsIco}scales`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Габариты
-										.s4__slider-scale-text 2,4м x 6м
-									.s4__slider-scale
-										+picture(png, `${assetsIco}wood`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Доставка
-										.s4__slider-scale-text Манипулятором за 1 час
-									.s4__slider-scale
-										+picture(png, `${assetsIco}3dcube`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Толщина стены
-										.s4__slider-scale-text 1,700 мм
-									.s4__slider-scale
-										+picture(png, `${assetsIco}user`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Вместимость
-										.s4__slider-scale-text 6 человек
-								a.s4__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle data-descr="Баня под ключ с отделкой") Оставьте заявку и узнайте подробнее
-							li.s4__slider-item
-								.s4__slider-ibg.ibg 
-									+picture(jpg, `${assets}s4-i3-md`, 'n')
-								.s4__slider-title Баня под ключ с отделкой
-								.s4__slider-scales 
-									.s4__slider-scale
-										+picture(png, `${assetsIco}scales`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Габариты
-										.s4__slider-scale-text 5м x 6м
-									.s4__slider-scale
-										+picture(png, `${assetsIco}wood`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Доставка
-										.s4__slider-scale-text Сборка на участке
-									.s4__slider-scale
-										+picture(png, `${assetsIco}3dcube`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Толщина стены
-										.s4__slider-scale-text 1,700 мм
-									.s4__slider-scale
-										+picture(png, `${assetsIco}user`, 'n').s4__slider-scale-img
-										.s4__slider-scale-title Вместимость
-										.s4__slider-scale-text 10 человек
-								a.s4__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle data-descr="Баня под ключ с отделкой") Оставьте заявку и узнайте подробнее
-					+slider-nav().s4__slider-nav
-		section.s5 
-			.s5__container.container 
-				+picture(png, `${assets}s5-bg`, 'sml').s5__img-bg
-				h2.s5__title #[span.text-green Выберите параметры своей будущей бани,] ответив на 6 простых вопросов
-				.s5__subtitle В конце вы получите бонусы на сумму до 30 000 ₽ и расчет-смету в течение 10 минут
-				ul.s5__list 
-					li.s5__item.s5__item--1
-						+picture(png, `${assets}s5-list-i1`, 'n').s5__item-img.s5__item-img--1
-						.s5__item-title Дверь из липы
-						.s5__item-sub экономия #[span.price 5 000 ₽]
-					li.s5__item.s5__item--2
-						+picture(png, `${assets}s5-list-i2`, 'n').s5__item-img.s5__item-img--2
-						.s5__item-title Потолок из липы
-						.s5__item-sub экономия #[span.price 7 000 ₽]
-					li.s5__item.s5__item--3
-						+picture(png, `${assets}s5-list-i3`, 'n').s5__item-img.s5__item-img--3
-						.s5__item-title Террасы
-						.s5__item-sub скидка #[span.price 30%]
-					li.s5__item.s5__item--4
-						+picture(png, `${assets}s5-list-i4`, 'n').s5__item-img.s5__item-img--4
-						.s5__item-title Камни для печи
-						.s5__item-sub экономия #[span.price 2 000 ₽]
-				a.s5__btn.uk-button.btn-solid-primary(href="#" onclick="Marquiz.showModal('60686bbdd6512900444a6d73')") Выбрать параметры
-		section.s6 
-			.container 
-				+picture(jpg, `${assets}s6-bg`, 'sml').s6__img-bg
-				h2.s6__title  Вентилируемый каркас обеспечивает #[span.text-green срок службы более 10 лет ]
-				ul.s6__list 
-					li.s6__item.s6__item--1
-						.s6__item-text Разогрев температуры до 100С#[br] #[strong за 1 час]
-					li.s6__item.s6__item--2
-						.s6__item-text Предоставляем гарантию#[br] #[strong до 5 лет]
-					li.s6__item.s6__item--3
-						.s6__item-text Мобильные строения #[strong не#[br] облагаются] налогом
-					li.s6__item.s6__item--4
-						.s6__item-text Срок службы #[strong 1/4+ века за счёт]#[br] скандинавской технологии
-					li.s6__item.s6__item--5
-						.s6__item-text Держит тепло #[strong до 20 часов]#[br] Невероятная выдержка 
-					li.s6__item.s6__item--6
-						.s6__item-text Низ бани обработан #[strong битумной#[br] мастикой] защищая от гниения
-		section.s7 
-			.container 
-				h2.s7__title Посмотрите короткий обзор одной из наших бань
-				.s7__block
-					+picture(jpg, `${assets}s7-block`, 'sml').s7__block-img
-					a.s7__play(href="#video" data-uk-toggle)
-						+icon('play-btn')
-		section.s8 
-			.s8__ibg.ibg.d-none.d-lg-block 
-				+picture(jpg, `${assets}s8-bg`, 'n')
-			.container 
-				h2.s8__title Каталог #[span.text-green бань]
-				.s8__slider
-					.s8__slider-container.uk-slider-container
-						ul.s8__slider-items.uk-slider-items 
-							li.s8__slider-item
-								.s8__slider-ibg.ibg 
-									+picture(jpg, `${assets}s8-i1`, 'n')
-								.s8__slider-head 
-									.s8__slider-title «Народный выбор»
-									.s8__slider-mes
-										+picture(png, `${assetsIco}user`, 'n').s8__slider-mes-img
-										span 4+ чел.
-									.s8__slider-price От #[strong 185 900 р.]
-									.s8__slider-mes
-										+picture(png, `${assetsIco}scales`, 'n').s8__slider-mes-img
-										span 4х2,4м
-								.s8__slider-divider
-								.s8__slider-text Привлекательный вид и небольшие размеры бани 4х2,4м., будут гармонично смотреться на любом участке и рядом с любым домом.
-								a.s8__slider-btn.s8__slider-btn--gray.uk-button.btn-solid-primary(href="#bani-item1" data-uk-toggle) Ознакомиться с предложением
-							li.s8__slider-item
-								.s8__slider-ibg.ibg 
-									+picture(jpg, `${assets}s8-i2`, 'n')
-								.s8__slider-head 
-									.s8__slider-title «Семейная» 
-									.s8__slider-mes
-										+picture(png, `${assetsIco}user`, 'n').s8__slider-mes-img
-										span 5+ чел.
-									.s8__slider-price От #[strong 202 900 р.]
-									.s8__slider-mes
-										+picture(png, `${assetsIco}scales`, 'n').s8__slider-mes-img
-										span 5х2,4м
-								.s8__slider-divider
-								.s8__slider-text Уютная баня 5х2,4 станет отличным местом отдыха для всей семьи. Баня состоит из 3 отделений – комната отдыха, парная и помывочная.
-								a.s8__slider-btn.s8__slider-btn--gray.uk-button.btn-solid-primary(href="#bani-item2" data-uk-toggle) Ознакомиться с предложением
-							li.s8__slider-item
-								.s8__slider-ibg.ibg 
-									+picture(jpg, `${assets}s8-i3`, 'n')
-								.s8__slider-head 
-									.s8__slider-title «Дачник» 
-									.s8__slider-mes
-										+picture(png, `${assetsIco}user`, 'n').s8__slider-mes-img
-										span 3 чел.
-									.s8__slider-price От #[strong 99 000 р.]
-									.s8__slider-mes
-										+picture(png, `${assetsIco}scales`, 'n').s8__slider-mes-img
-										span 1,6х2,2м
-								.s8__slider-divider
-								.s8__slider-text В небольшой бане 1,6х2,2 кв.м. из качественного бруса, вы сможете в любое удобное для вас время посещать парную и оздоравливаться в кругу своих родных и близких.
-								a.s8__slider-btn.s8__slider-btn--gray.uk-button.btn-solid-primary(href="#bani-item3" data-uk-toggle) Ознакомиться с предложением
-							li.s8__slider-item
-								.s8__slider-ibg.ibg 
-									+picture(jpg, `${assets}s8-i4`, 'n')
-								.s8__slider-head 
-									.s8__slider-title «Народный выбор#[br] с террассой 2х4» 
-									.s8__slider-mes
-										+picture(png, `${assetsIco}user`, 'n').s8__slider-mes-img
-										span 4+ чел.
-									.s8__slider-price От #[strong 202 900 р.]
-									.s8__slider-mes
-										+picture(png, `${assetsIco}scales`, 'n').s8__slider-mes-img
-										span 4х2,4м
-								.s8__slider-divider
-								.s8__slider-text Каркасная баня с террасой под ключ для любителей хорошо попариться, а затем отдохнуть на свежем воздухе.
-								a.s8__slider-btn.s8__slider-btn--gray.uk-button.btn-solid-primary(href="#bani-item4" data-uk-toggle) Ознакомиться с предложением
-							li.s8__slider-item
-								.s8__slider-ibg.ibg 
-									+picture(jpg, `${assets}s8-i5`, 'n')
-								.s8__slider-head 
-									.s8__slider-title «Быстро Жар» 
-									.s8__slider-mes
-										+picture(png, `${assetsIco}user`, 'n').s8__slider-mes-img
-										span 3+ чел.
-									.s8__slider-price От #[strong 144 900 р.]
-									.s8__slider-mes
-										+picture(png, `${assetsIco}scales`, 'n').s8__slider-mes-img
-										span 3х2,4м
-								.s8__slider-divider
-								.s8__slider-text Проводите в бане время вместе с друзьями или уединитесь и найдите гармонию с самим собой. Крытая терраса идет к бане как доп. опция — уютная зона отдыха на свежем воздухе. 
-								a.s8__slider-btn.s8__slider-btn--gray.uk-button.btn-solid-primary(href="#bani-item5" data-uk-toggle) Ознакомиться с предложением
-							li.s8__slider-item.s8__slider-item--last
-								.s8__slider-item-title Хочу индивидуальный#[br] проект под ключ
-								+icon('rounded-plus')
-								a.s8__slider-btn.uk-button.btn-solid-primary(href="#callback" data-uk-toggle data-descr="Хочу индивидуальный проект под ключ") Оставьте заявку и узнайте подробнее
-					+slider-nav().s8__slider-nav
-				.s8__wa
-					.s8__wa-title  Ознакомьтесь с полным каталогом бань в WhatsApp
-					a.s8__wa-btn.uk-button.btn-solid-primary(href="https://wa.me/79670777112?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5.%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B7%D0%BD%D0%B0%D0%BA%D0%BE%D0%BC%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D1%81%20%D0%BF%D0%BE%D0%BB%D0%BD%D1%8B%D0%BC%20%D0%BA%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3%D0%BE%D0%BC%20%D0%B1%D0%B0%D0%BD%D1%8C" target="_blank" onclick="ym(75096775,'reachGoal','whatsapp')") 
-						+icon('wa')
-						span Перейти в WhatsApp
+		section.s12
+			.container 	
+				h2.s12__title Уютный дом 64 — это
+				.s12__blocks 
+					.s12__block
+				ul.s12__list 
+					li.s12__item
+						+picture(png, `${assetsIco}shield-ok`, 'n').s12__item-img
+						.s12__item-text Каркасные бани за 10 дней с гарантией до&nbsp;5&nbsp;лет и доставкой по&nbsp;всей России и СНГ.
+					li.s12__item
+						+picture(png, `${assetsIco}cube`, 'n').s12__item-img
+						.s12__item-text Строим в строгом соответствии с&nbsp;ГОСТом и СНиПам
+					li.s12__item
+						
+						+picture(png, `${assetsIco}cask`, 'n').s12__item-img
+						.s12__item-text Все рабочие имеют квалификацию и&nbsp;проходят регулярные проверки
+					li.s12__item
+						
+						+picture(png, `${assetsIco}wallet`, 'n').s12__item-img
+						.s12__item-text Удобная система оплаты —#[br] для старта проекта нужно внести всего 1000₽
+					li.s12__item
+						+picture(png, `${assetsIco}map`, 'n').s12__item-img
+						.s12__item-text Находимся в районе Саратова и&nbsp;Энгельса — вы можете  в живую увидеть ппроизводство вашей бани
 		section.s9
 			.container 
-				h2.s9__title Наши #[span.text-green отзывы]
+				h2.s9__title Посмотрите отзывы#[br.d-md-none] #[span.text-green наших#[br.d-none.d-md-inline.d-lg-none] клиентов]
 				.s9__slider(data-uk-slider="center: true;")
 					.s9__slider-container.uk-slider-container
 						ul.uk-slider-items 
@@ -360,6 +100,52 @@ block content
 							+icon('angle-left')
 						a.s9__slider-nav-angle.s9__slider-nav-angle--right(href="#" data-uk-slider-item="next")
 							+icon('angle-right')
+		section.s13
+			.container 
+				h2.s13__title Успейте забронировать#[br] баню #[span.text-green по старой цене]
+				.s13__subtitle К сожалению, материалы дорожают#[br] каждый месяц на 20%
+				+picture(png, `${assets}s13-img`, 'sm').s13__img
+				form.form.s13__form(action="#") 
+					p.form__title Рассчитаем стоимость#[br.d-md-none] за 5 минут по старым ценам
+					.form__inputs
+						.input-wrap 
+							input.form__input.input(type="text" name="name" placeholder="Введите имя")
+						.input-wrap 
+							input.form__input.input.phone(type="tel" name="phone" placeholder="Введите номер телефона")
+						input.input-hidden-descr(type="hidden" name="Описание" value="Рассчитаем стоимость за 5 минут по старым ценам")
+						button.form__submit.uk-button.btn-solid-primary(type="submit") Рассчитать 
+		section.s14
+			.container 
+				+picture(jpg, `${assets}s14-bg`, 'n').s14__img-bg
+				h2.s14__or Или
+				h2.s14__title Запишитесь на #[span.text-green видео презентацию#[br] и посмотрите наше производство онлайн]
+				.s14__list 
+					+picture(png, `${assets}s14-i1`, 'n').s14__list-img.s14__list-img--1
+					+picture(png, `${assets}s14-i2`, 'n').s14__list-img.s14__list-img--2
+					+picture(png, `${assets}s14-i3`, 'n').s14__list-img.s14__list-img--3
+					.s14__list-item Менеджер созвонится с вами по видео связи в&nbsp;удобное для вас время
+					.s14__list-item По видео продемонстрируем наше производство и&nbsp;с&nbsp;ориентируем вас о&nbsp;стоимости
+					.s14__list-item Cразу узнайте условия доставки, о подготовке фундамента, сроках и&nbsp;по&nbsp;другим вопросам
+				.s14__banya 
+					+picture(png, `${assets}s14-banya`, 'n').s14__banya-img
+					a.s14__banya-play(href=`#video1` data-uk-toggle)
+						svg(viewBox="0 0 129 130" fill='none' xmlns='http://www.w3.org/2000/svg')
+							circle(cx="64.7239" cy="64.7835" r="64.2601" fill="white")
+							path(d="M64.7246 10.2834C34.3494 10.2834 9.72461 34.6839 9.72461 64.7834C9.72461 94.883 34.3494 119.283 64.7246 119.283C95.0999 119.283 119.725 94.883 119.725 64.7834C119.725 34.6839 95.0999 10.2834 64.7246 10.2834ZM83.734 67.6724L56.234 84.7036C55.6775 85.0479 55.0448 85.2209 54.4121 85.2209C53.8389 85.2209 53.2648 85.0796 52.7454 84.7935C51.6527 84.1931 50.9746 83.0537 50.9746 81.8147V47.7522C50.9746 46.5132 51.6527 45.3738 52.7454 44.7734C53.838 44.1697 55.1742 44.2063 56.234 44.8633L83.734 61.8945C84.7386 62.5183 85.3496 63.6094 85.3496 64.7834C85.3496 65.9575 84.7386 67.0488 83.734 67.6724Z" fill="#96C12A")
+					.s14__banya-text: span Посмотрите, как это проходит#[br] видео презентация
+				.s14__form-outer
+					img(src=`${assets}s14-phone.svg` alt="").s14__form-phone.d-lg-none
+					form.form.s14__form(action="#") 
+						.s14__form-phone-mask
+							img(src=`${assets}s14-phone-lg.svg` alt="").s14__form-phone.d-none.d-lg-block
+						p.form__title Рассчитать стоимость на запись видео презентации
+						.form__inputs
+							.input-wrap 
+								input.form__input.input(type="text" name="name" placeholder="Введите имя")
+							.input-wrap 
+								input.form__input.input.phone(type="tel" name="phone" placeholder="Введите номер телефона")
+							input.input-hidden-descr(type="hidden" name="Описание" value="Рассчитать стоимость на запись видео презентации")
+							button.form__submit.uk-button.btn-solid-primary(type="submit") Рассчитать 
 		section.s10 
 			.s10__container.container 
 				.s10__nav

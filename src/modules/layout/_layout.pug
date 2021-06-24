@@ -10,17 +10,17 @@ html(lang="ru")
 			meta(name="format-detection" content="telephone=no")
 			meta(content="ie=edge" http-equiv="x-ua-compatible")
 			meta(property="og:image" content=`/ogimage.jpg`)
-			<meta name="yandex-verification" content="c94c97910fd7f1fc" />
-			<meta name="google-site-verification" content="SmXxYj-q3olRdkZZjk5U7WScehKTzo7rH0EvPt9ugA4" />
+			//- <meta name="yandex-verification" content="c94c97910fd7f1fc" />
+			//- <meta name="google-site-verification" content="SmXxYj-q3olRdkZZjk5U7WScehKTzo7rH0EvPt9ugA4" />
 			
 			link(rel="stylesheet" href!=stylesPath)
 
 			include includes/_favicon
 			include includes/_metrika
 	body
-		<noscript><div><img src="https://mc.yandex.ru/watch/75096775" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+		//- <noscript><div><img src="https://mc.yandex.ru/watch/75096775" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
 		//- Google Tag Manager (noscript) 
-		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW32MWM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		//- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KW32MWM" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 		.app-wrapper
 			block header
@@ -33,7 +33,7 @@ html(lang="ru")
 		block scripts
 			script(src!=scriptsPath defer)
 			//- Marquiz script start 
-			script(defer).
+			//- script(defer).
 				(function(w, d, s, o){
 				var j = d.createElement(s); j.async = true; j.src = '//script.marquiz.ru/v2.js';j.onload = function() {
 					if (document.readyState !== 'loading') Marquiz.init(o);

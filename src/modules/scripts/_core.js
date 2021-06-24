@@ -1,6 +1,6 @@
 import UIkit from 'uikit'
 import validate from 'validate.js'
-  
+
 class App {
     constructor() {
         this.isMobile = {
@@ -11,11 +11,11 @@ class App {
             Windows: () => navigator.userAgent.match(/IEMobile/i),
             any: () => (this.isMobile.Android() || this.isMobile.BlackBerry() || this.isMobile.iOS() || this.isMobile.Opera() || this.isMobile.Windows())
         }
-        
+
         this.md = 768
         this.lg = 1410
 
-        this._apiBase = '/api/';  
+        this._apiBase = '/api/';
     }
 
     init() {
@@ -32,7 +32,7 @@ class App {
     // параллакс на элемент, должен иметь класс и data-parallax-k="10xx"
     mouseMove(mouseMoveItemSelector = '.mouse-parallax') {
 
-        window.addEventListener('mousemove', function(e) {
+        window.addEventListener('mousemove', function (e) {
             let x = e.clientX / window.innerWidth
             let y = e.clientY / window.innerHeight
             document.querySelectorAll(mouseMoveItemSelector).forEach(e => {
@@ -42,6 +42,7 @@ class App {
     }
     matchMediaListener(breakpoint, callbackLessThan, callbackBiggerThan) {
         const mediaQuery = window.matchMedia(`(min-width: ${breakpoint}px)`)
+
         function handleBreakpointCross(e) {
             // Check if the media query is true
             if (e.matches) {
@@ -70,7 +71,7 @@ class App {
     getIndexOfElements(el, set) {
         return [...set].indexOf(el)
     }
-    
+
     // при любом изменении слайда возвращает его индекс в CB функцию
     sliderSpy(slider, callback = (index) => {}) {
         document.querySelectorAll(`${slider} .uk-slider-items > li`).forEach((el, idx) => {
@@ -87,10 +88,10 @@ class App {
                 // Return stripped input value — just numbers
                 return input.value.replace(/\D/g, '');
             }
-        
+
             const onPhonePaste = (e) => {
                 const input = e.target,
-                      inputNumbersValue = getInputNumbersValue(input);
+                    inputNumbersValue = getInputNumbersValue(input);
                 const pasted = e.clipboardData || window.clipboardData;
                 if (pasted) {
                     const pastedText = pasted.getData('Text');
@@ -102,17 +103,17 @@ class App {
                     }
                 }
             }
-        
+
             const onPhoneInput = function (e) {
                 let input = e.target,
                     inputNumbersValue = getInputNumbersValue(input),
                     selectionStart = input.selectionStart,
                     formattedInputValue = "";
-        
+
                 if (!inputNumbersValue) {
                     return input.value = "";
                 }
-        
+
                 if (input.value.length != selectionStart) {
                     // Editing in the middle of input, not last symbol
                     if (e.data && /\D/g.test(e.data)) {
@@ -121,7 +122,7 @@ class App {
                     }
                     return;
                 }
-        
+
                 if (["7", "8", "9"].indexOf(inputNumbersValue[0]) > -1) {
                     if (inputNumbersValue[0] == "9") inputNumbersValue = "7" + inputNumbersValue;
                     const firstSymbols = (inputNumbersValue[0] == "8") ? "8" : "+7";
@@ -154,7 +155,7 @@ class App {
             input.addEventListener('input', onPhoneInput, false);
             input.addEventListener('paste', onPhonePaste, false);
         }
-        
+
 
         this.isComplete = () => {
             const inputNumbersValue = getInputNumbersValue(input);
@@ -206,10 +207,10 @@ class Quiz extends App {
 
     }
 
-    create () {
+    create() {
         this.toSlide(this.currentSlide)
 
-        this.quiz.querySelectorAll(`.quiz-radio`).forEach( (elem, idx, parent) => {
+        this.quiz.querySelectorAll(`.quiz-radio`).forEach((elem, idx, parent) => {
             elem.addEventListener(`click`, (event) => {
                 const target = event.currentTarget
                 target.closest(`.quiz-radio-wrap`).querySelectorAll(`.quiz-radio`).forEach(e => e.classList.remove(this.activeClass))
@@ -226,7 +227,7 @@ class Quiz extends App {
         this.quiz.querySelector(`.quiz-btn-next`).addEventListener(`click`, ev => {
             this.toNextSlide()
         })
-        
+
     }
 
     refreshValues() {
@@ -243,7 +244,7 @@ class Quiz extends App {
                 //изменение высот
                 // this.quiz.querySelector(`.quiz-slide-wrap`).style.cssText = `height: 27rem`
             }
-            
+
         } else {
             // остальные слайды
             this.quiz.querySelectorAll(`.quiz-final-hide`).forEach(el => el.classList.remove(`hidden`))
@@ -254,9 +255,9 @@ class Quiz extends App {
                 // this.quiz.querySelector(`.quiz-slide-wrap`).style.cssText = `
                 // height: ${this.quiz.querySelector(`.quiz-slide.${this.activeClass} .quiz-radio-wrap`).clientHeight + this.quiz.querySelector(`.quiz-slide.${this.activeClass} h3`).clientHeight + 30}px`
             }
-            
+
         }
-        
+
     }
 
     toNextSlide() {
@@ -265,7 +266,7 @@ class Quiz extends App {
         } else {
             console.error(`Error in Quiz.toNextSlide(): last slide cannot be passed`)
         }
-        
+
     }
 
     toPrevSlide() {
@@ -295,7 +296,7 @@ class Quiz extends App {
             el.querySelectorAll(`.${this.activeClass}`).forEach(e => list.push(e.getAttribute("data-value")))
             this.quiz.querySelector(`form .values`).insertAdjacentHTML('beforeend', `<input type="hidden" name="${el.getAttribute(`data-title`)}" value="${list.join(`, `)}">`)
         })
-        
+
     }
 
     reset() {
@@ -313,91 +314,91 @@ class Form extends App {
         this.classHasSuccess = `has-success`
         this.formInput = `.input-wrap`
         this.disableIMask = false,
-        this.disableMessages = true,
-        this.removeErrorOnFocus = true,
-        this.constraints = {
-            email: {
-              // Email is required
-              presence: true,
-              // and must be an email (duh)
-              email: true
-            },
-            password: {
-              // Password is also required
-              presence: true,
-              // And must be at least 5 characters long
-              length: {
-                minimum: 5
-              }
-            },
-            "confirm-password": {
-              // You need to confirm your password
-              presence: true,
-              // and it needs to be equal to the other password
-              equality: {
-                attribute: "password",
-                message: "^The passwords does not match"
-              }
-            },
-            "Имя": {
-              // You need to pick a username too
-              presence: true,
-              // And it must be between 3 and 20 characters long
-              length: {
-                minimum: 3,
-                maximum: 20
-              },
-              format: {
-                // We don't allow anything that a-z and 0-9
-                pattern: "[А-яA-z ]+",
-                // but we don't care if the username is uppercase or lowercase
-                flags: "i",
-                message: "Только русские буквы"
-              }
-            },
-            // birthdate: {
-            //   // The user needs to give a birthday
-            //   presence: true,
-            //   // and must be born at least 18 years ago
-            //   date: {
-            //     latest: moment().subtract(18, "years"),
-            //     message: "^You must be at least 18 years old to use this service"
-            //   }
-            // },
-            country: {
-              // You also need to input where you live
-              presence: true,
-              // And we restrict the countries supported to Sweden
-              inclusion: {
-                within: ["SE"],
-                // The ^ prevents the field name from being prepended to the error
-                message: "^Sorry, this service is for Sweden only"
-              }
-            },
-            zip: {
-              // Zip is optional but if specified it must be a 5 digit long number
-              format: {
-                pattern: "\\d{5}"
-              }
-            },
-            "number-of-children": {
-              presence: true,
-              // Number of children has to be an integer >= 0
-              numericality: {
-                onlyInteger: true,
-                greaterThanOrEqualTo: 0
-              }
-            },
-            "Телефон": {
-                presence: true,
-                isMaskComplete: true
+            this.disableMessages = true,
+            this.removeErrorOnFocus = true,
+            this.constraints = {
+                email: {
+                    // Email is required
+                    presence: true,
+                    // and must be an email (duh)
+                    email: true
+                },
+                password: {
+                    // Password is also required
+                    presence: true,
+                    // And must be at least 5 characters long
+                    length: {
+                        minimum: 5
+                    }
+                },
+                "confirm-password": {
+                    // You need to confirm your password
+                    presence: true,
+                    // and it needs to be equal to the other password
+                    equality: {
+                        attribute: "password",
+                        message: "^The passwords does not match"
+                    }
+                },
+                "name": {
+                    // You need to pick a username too
+                    presence: true,
+                    // And it must be between 3 and 20 characters long
+                    length: {
+                        minimum: 3,
+                        maximum: 20
+                    },
+                    format: {
+                        // We don't allow anything that a-z and 0-9
+                        pattern: "[А-яA-z ]+",
+                        // but we don't care if the username is uppercase or lowercase
+                        flags: "i",
+                        message: "Только русские буквы"
+                    }
+                },
+                // birthdate: {
+                //   // The user needs to give a birthday
+                //   presence: true,
+                //   // and must be born at least 18 years ago
+                //   date: {
+                //     latest: moment().subtract(18, "years"),
+                //     message: "^You must be at least 18 years old to use this service"
+                //   }
+                // },
+                country: {
+                    // You also need to input where you live
+                    presence: true,
+                    // And we restrict the countries supported to Sweden
+                    inclusion: {
+                        within: ["SE"],
+                        // The ^ prevents the field name from being prepended to the error
+                        message: "^Sorry, this service is for Sweden only"
+                    }
+                },
+                zip: {
+                    // Zip is optional but if specified it must be a 5 digit long number
+                    format: {
+                        pattern: "\\d{5}"
+                    }
+                },
+                "number-of-children": {
+                    presence: true,
+                    // Number of children has to be an integer >= 0
+                    numericality: {
+                        onlyInteger: true,
+                        greaterThanOrEqualTo: 0
+                    }
+                },
+                "phone": {
+                    presence: true,
+                    isMaskComplete: true
+                }
             }
-        }
     }
 
     init(form = `form`) {
         validate.validators.isMaskComplete = (value, options, key, attributes) => {
-            if (key == "Телефон" && options == true && value != null) {
+            if (key == "phone" && options == true && value != null) {
                 if (this.PhoneMask().checkCompleteness(value)) {
                     return null
                 } else {
@@ -445,7 +446,7 @@ class Form extends App {
 
     handleFormSubmit(form, input) {
         // validate the form against the constraints
-        
+
         let errors = validate(form, this.formConstraints(form));
         // then we update the form to reflect the results
         this.showErrors(form, errors || {});
@@ -457,16 +458,16 @@ class Form extends App {
     // Updates the inputs with the validation errors
     showErrors(form, errors) {
         // We loop through all the inputs and show the errors for that input
-          // Since the errors can be null if no errors were found we need to handle
-          // that
+        // Since the errors can be null if no errors were found we need to handle
+        // that
         form.querySelectorAll("input[name], select[name], textarea[name]").forEach(input => this.showErrorsForInput(input, errors && errors[input.name]))
     }
 
-      // Shows the errors for a specific input
+    // Shows the errors for a specific input
     showErrorsForInput(input, errors) {
         // This is the root of the input
         let formGroup = input.closest(this.formInput)
-          // Find where the error messages will be insert into
+        // Find where the error messages will be insert into
         let messages = null
         if (formGroup != null) {
             if (!this.disableMessages) {
@@ -476,18 +477,18 @@ class Form extends App {
             this.resetFormGroup(formGroup);
             // If we have errors
             if (errors) {
-              // we first mark the group has having errors
-              formGroup.classList.add(this.classHasError);
-              // then we append all the errors
-              errors.forEach(error => this.addError(error, messages))
+                // we first mark the group has having errors
+                formGroup.classList.add(this.classHasError);
+                // then we append all the errors
+                errors.forEach(error => this.addError(error, messages))
             } else {
-              // otherwise we simply mark it as success
-              formGroup.classList.add(this.classHasSuccess);
+                // otherwise we simply mark it as success
+                formGroup.classList.add(this.classHasSuccess);
             }
         }
     }
 
-    
+
 
     resetFormGroup(formGroup) {
         // Remove the success and error classes
@@ -497,8 +498,8 @@ class Form extends App {
         formGroup.querySelectorAll(".help-block.error").forEach(el => el.parentNode.removeChild(el))
     }
 
-      // Adds the specified error with the following markup
-      // <p class="help-block error">[message]</p>
+    // Adds the specified error with the following markup
+    // <p class="help-block error">[message]</p>
     addError(error, messages) {
         const block = document.createElement("p");
         block.classList.add("help-block");
@@ -507,20 +508,20 @@ class Form extends App {
         if (!this.disableMessages && messages != null) {
             messages.appendChild(block);
         }
-        
+
     }
 
     showSuccess(form) {
         const formData = new FormData(form)
-        
+
         if (form.classList.contains(`form-quiz`)) {
-            ym(71270149,'reachGoal','quiz')
+            ym(71270149, 'reachGoal', 'quiz')
         } else {
-            ym(71270149,'reachGoal','form')
+            ym(71270149, 'reachGoal', 'form')
         }
         UIkit.modal(`#thanks`).show();
-        ym(75096775,'reachGoal','form')
-        setTimeout(() =>  ym(75096775,'reachGoal','form_call'), 10)
+        ym(75096775, 'reachGoal', 'form')
+        setTimeout(() => ym(75096775, 'reachGoal', 'form_call'), 10)
         fbq('track', 'Lead')
         fetch(`${this._apiBase}mail.php`, {
             method: 'post',
@@ -542,13 +543,17 @@ class Form extends App {
             if (this.constraints[e.name] != undefined) {
                 localConstraints[e.name] = this.constraints[e.name]
             }
-            
+
         })
         return localConstraints
     }
-    
+
 }
 
 
 
-export { App, Quiz, Form }
+export {
+    App,
+    Quiz,
+    Form
+}
