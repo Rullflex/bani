@@ -3167,6 +3167,19 @@
             &-play {
                 top: 7.4875rem;
                 left: 16.15rem;
+                svg {
+                    path {
+                        fill: #C9C9C9;
+                        transition: $transition--hover;
+                    }
+                }
+                &:hover {
+                    svg {
+                        path {
+                            fill: $primary;
+                        }
+                    }
+                }
             }
             &-text {
                 margin-left: 176px;
